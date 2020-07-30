@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/shape_gift_dialog_item"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/constraint_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fl_img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_gift_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                tools:src="@drawable/add_user_iv" />
+
+
+             <com.opensource.svgaplayer.SVGAImageView
+
+                 app:autoPlay="true"
+                 app:loopCount="1"
+                 android:id="@+id/svg_img"
+                 android:layout_gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_send"
+            app:layout_constraintTop_toBottomOf="@+id/fl_img_bg"
+
+            android:gravity="center"
+            android:background="@drawable/shape_gift_dialog_send_item"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="发送"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="2dp"
+        android:id="@+id/tv_gift_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_ffffff"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_bg"
+        tools:text="火箭" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_gift_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/album_dp_2"
+        android:drawableRight="@mipmap/icon_diamond_yellow"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:textColor="#ffbbbbbb"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gift_name"
+        tools:text="9999" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

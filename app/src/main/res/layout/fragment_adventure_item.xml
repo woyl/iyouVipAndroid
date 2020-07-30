@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lin.cardlib.SwipeTouchLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="295dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <com.jfkj.im.view.RoundImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/game_bg_adventure_nor"/>
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:background="@null"
+        android:maxLength="30"
+        android:maxLines="3"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑你的大冒险"
+            android:textSize="13sp"
+            android:textColor="@color/C1EE8F4"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/C1EE8F4"/>
+    </LinearLayout>
+</com.lin.cardlib.SwipeTouchLayout>

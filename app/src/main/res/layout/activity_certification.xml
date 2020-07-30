@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jfkj.im.ui.mine.CertificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/include_base_back_title"/>
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:background="@color/black_font_color"
+            android:paddingEnd="40dp"
+            android:paddingStart="30dp"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/c767676"
+            android:hint="请输入您的姓名"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <View
+            android:background="@color/color_e5e5e5"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <EditText
+            android:id="@+id/ed_card"
+            android:background="@color/black_font_color"
+            android:paddingEnd="40dp"
+            android:paddingStart="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/c767676"
+            android:textSize="13sp"
+            android:digits="0123456789xyzXYZ"
+            android:inputType="number"
+            android:maxLength="18"
+            android:hint="请输入您的身份证号"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <View
+            android:background="@color/color_e5e5e5"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="0.5dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font_color"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请上传身份证正面照片或扫描件"
+                android:textColor="@color/c767676"
+                android:textSize="13sp" />
+
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/fl_1"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hints"
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:src="@mipmap/icon_add_picture"
+                    android:id="@+id/iv_cardPhoto1"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:scaleType="centerCrop"
+                    android:background="@mipmap/icon_add_pic_white"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/dialog_close1_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:padding="3dp"
+                    android:layout_gravity="end"
+                    android:src="@mipmap/icon_delect_red"
+                    tools:ignore="MissingConstraints" />
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请上传身份证正面照片或扫描件"
+                android:textColor="@color/c767676"
+                android:textSize="13sp"
+                />
+
+
+            <FrameLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hints"
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:src="@mipmap/icon_add_picture"
+                    android:id="@+id/iv_cardPhoto2"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:scaleType="centerCrop"
+                    android:background="@mipmap/icon_add_pic_white"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/dialog_close2_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:padding="3dp"
+                    android:layout_gravity="end"
+                    android:src="@mipmap/icon_delect_red"
+                    tools:ignore="MissingConstraints" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+
+
+        <TextView
+            android:clickable="false"
+            android:id="@+id/tv_submit"
+            android:gravity="center"
+            android:text="提交实名认证"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:alpha="0.5"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shap_bt_two_bg"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="实名认证将在24小时内完成审核"
+            android:textColor="#ff999999"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+

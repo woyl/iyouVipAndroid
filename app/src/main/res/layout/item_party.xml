@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl">
+
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_brg"
+        android:background="@mipmap/party_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="34dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            tools:text = "周一不蹦迪明天变垃圾"/>
+
+        <TextView
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_loaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="成都市·SPACE"
+            android:singleLine="true"
+            android:textSize="15dp"
+            android:textColor="#bbbbbb"/>
+
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#bbbbbb"
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            tools:text="10月16日  下午10:30/限定2人"
+           />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="60.5dp"
+        android:layout_height="24dp"
+        android:textColor="@color/white"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="14dp"
+         android:gravity="center"
+        android:textSize="@dimen/font_12sp"
+        tools:text="进行中"
+        android:background="@drawable/shap_item_party_bg"/>
+
+
+    <View
+        android:id="@+id/view"
+        android:background="#33000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_countdown"
+
+        android:gravity="center"
+        android:text="点评倒计时23:59:59"
+        android:textColor="@color/color_ffffff"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:background="@mipmap/party_list_bg_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

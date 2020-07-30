@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_head"
+    android:background="@mipmap/test_bg_nor"
+    tools:context="com.jfkj.im.TIM.redpack.chatroom.MatchCharacterActivity">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_title_right_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        android:background="@mipmap/icon_close_white"/>
+
+
+
+    <ImageView
+        android:src="@mipmap/icon_character_title"
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_right_icon1"
+        android:textSize="23sp"
+        android:text="性格测试"
+        />
+
+
+        <LinearLayout
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="23dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_1"
+            android:id="@+id/fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="25dp"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.jfkj.im.view.CirImageView
+                    android:id="@+id/cir_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/img_avatar_01"/>
+
+                <TextView
+                    android:id="@+id/tv_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    tools:text="毛绒大脑斧"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/tv_match"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="100%"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_red"
+                    style="@style/mProgressBarStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:progress="50"
+                    android:max="100"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_1"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/progressbar_character_bg"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:layout_marginTop="3.5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="匹配度"
+                    android:textColor="#ff1ee8f4"
+                    android:textSize="11sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.jfkj.im.view.CirImageView
+                    android:id="@+id/cir_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/img_avatar_01"/>
+
+                <TextView
+                    android:id="@+id/tv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="毛绒大脑斧"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

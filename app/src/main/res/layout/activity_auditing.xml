@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.AuditingActivity">
+
+
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:id="@+id/tv_auditing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:text="审核中"
+        android:textColor="@color/color_ffffff"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        android:id="@+id/tv_no_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_auditing"
+        android:text="我们已经收到你的照片和视频，请耐心等待！"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_wait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tv_no_reg"
+        android:text="前方等待审核有"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ll_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wait"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_wait_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="123"
+
+
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:gravity="bottom"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="人"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ImageView
+        android:src="@mipmap/icon_auditing_buttom_brg"
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:text="审核完成后，我们会用手机短信通知您。"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:textColor="@color/color_333333"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:id="@+id/btn_back_login"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:text="回到登录页面"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ok"
+        tools:ignore="MissingConstraints"
+        android:layout_height="45dp"
+        android:layout_width="match_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

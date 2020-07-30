@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jfkj.im.ui.party.MyCrushIceTaskActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_base_back_title"/>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的破冰任务"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_pic_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="照片任务"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="37dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="42dp"
+        android:paddingEnd="42dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shap_cle_fivgray_bg"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_video_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视频任务"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="42dp"
+        android:paddingEnd="42dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/tv_pic_task"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="37dp"
+        android:layout_marginStart="37dp"
+        android:background="@drawable/shap_cle_fivgray_bg"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="任务内容"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pic_task"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shap_cle_fivgray_bg"
+        android:padding="15dp"
+        android:textColorHint="@color/c767676"
+        android:textColor="@color/white"
+        android:hint="输入任务内容"
+        android:maxLength="20"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        tools:ignore="HardcodedText,MissingConstraints,RtlHardcoded" />
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="0/20"
+        android:maxLength="20"
+        android:textColor="@color/c767676"
+        app:layout_constraintBottom_toBottomOf="@+id/et_content"
+        app:layout_constraintRight_toRightOf="@id/et_content"
+        tools:ignore="HardcodedText,MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="奖励金额"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_content"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+        android:text="每人奖励"
+        android:textColor="@color/c767676"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/tv_4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="100"
+        android:drawablePadding="5dp"
+        android:drawableEnd="@mipmap/icon_diamond_yellow"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/cEF4769"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.jfkj.im.view.Ruler
+        android:id="@+id/ruler"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/c111111"
+        app:fromValue="100"
+        app:interval="5dp"
+        app:intervalsBetweenValues="10"
+        app:linesColor="@color/c767676"
+        app:linesWidth="1dp"
+        app:toValue="1000"
+        app:valuesInterval="100"
+        app:valuesTextSize="12sp"
+        app:valuesTextColor="@color/c767676"
+        tools:ignore="MissingConstraints"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_money"/>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="提交任务"
+        app:layout_constraintTop_toBottomOf="@+id/ruler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/shape_tv_three_bg_gray"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

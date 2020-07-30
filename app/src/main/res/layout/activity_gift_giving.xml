@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.GiftGivingActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赠送礼物"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送好友请求"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/color_999999"
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您已选择9位想认识的女生，每位赠送¥ 10的礼物。
+若对方拒绝或24小时内无回应，礼物将全额退回。"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2"
+        android:layout_marginTop="7dp"
+        android:paddingStart="37dp"
+        android:paddingEnd="37dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_3"
+        app:layout_constraintBottom_toTopOf="@+id/tv_send"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/tv_send"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="@color/c333333"
+        android:gravity="center"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_1"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:text="发送好友申请"/>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_identification_nor"/>
+        <TextView
+            android:layout_marginLeft="2dp"
+            android:textColor="#BBBBBB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100%经过I you官方视频真人验证"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

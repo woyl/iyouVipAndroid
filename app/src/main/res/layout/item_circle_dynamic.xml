@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/ActivityBackGround"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_user_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/sex_icon_male" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="#ffbbbbbb"
+        android:textSize="@dimen/font_12sp"
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        style="@style/ActivityDefaultWhiteTextColor"
+        app:layout_constraintLeft_toRightOf="@+id/iv_user_head"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_head"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_head"
+        tools:text="小老鼠" />
+
+    <!-- android:drawableStart="@mipmap/icon_location"-->
+
+
+    <TextView
+        android:textColor="#fffdfdfd"
+        android:textSize="13sp"
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="50dp"
+        style="@style/ActivityDefaultWhiteTextColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user_head"
+        tools:text="我是内容" />
+
+    <RelativeLayout
+        android:id="@+id/layout_image_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <!--视频-->
+        <FrameLayout
+            android:id="@+id/f_video_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.jfkj.im.view.MyScaleImageView
+                android:id="@+id/iv_video_brg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@mipmap/icon_camera_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="#ff767676"
+        android:textSize="11sp"
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:drawablePadding="2dp"
+        android:layout_marginStart="58dp"
+        tools:text=""
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image_video"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff767676"
+        android:textSize="11sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_address"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image_video"
+        tools:text="1小时前"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image_video"
+        android:id="@+id/discuss_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        tools:text="728次赞、共389条评论"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textColor="#ff767676"
+        android:textSize="10sp"
+        android:id="@+id/tv_discuss"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:drawableStart="@mipmap/discuss"
+        android:drawablePadding="2dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        tools:text=""
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="54.5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image_video" />
+
+    <LinearLayout
+        android:id="@+id/layout_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintRight_toLeftOf="@+id/tv_discuss"
+        app:layout_constraintTop_toBottomOf="@+id/layout_image_video">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_like"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="2dp"-->
+<!--            android:background="@mipmap/paise" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:lottie_rawRes="@raw/heart_animation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+
+            android:textColor="#ff767676"
+            android:textSize="10sp"
+            android:id="@+id/tv_like"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+
+            tools:text="999"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:background="@mipmap/commet_diamount_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_like">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_diamonds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="已获得1条评论，收到10"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:drawablePadding="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/c767676"
+            android:drawableEnd="@mipmap/icon_diamond_yellow"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
+
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:visibility="gone"
+        android:background="#E5E5E5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_recycler" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

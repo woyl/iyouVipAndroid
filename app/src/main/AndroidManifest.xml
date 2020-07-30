@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jfkj.im">
+
+    <permission
+        android:name="com.jfkj.vip.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.jfkj.vip.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem" />
+    <permission
+        android:name="com.jfkj.vip.push.permission.MESSAGE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.jfkj.vip.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.jfkj.vip.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" /> <!-- 这里的 com.tencent.qcloud.tim.tuikit 改成您的 App 的包名 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 这里com.xiaomi.mipushdemo改成app的包名 -->
+    <!-- 这里的 com.tencent.qcloud.tim.tuikit 改成您的 App 的包名 -->
+    <!-- 这里的 com.tencent.qcloud.tim.tuikit 改成您的 App 的包名 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" /> <!-- 这里的 com.tencent.qcloud.tim.tuikit 改成您的 App 的包名 -->
+    <!-- ********魅族推送权限设置 start******** -->
+    <!-- 兼容 flyme5.0 以下版本，魅族内部集成 pushSDK 必填，不然无法收到消息 -->
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
+    <uses-permission android:name="com.jfkj.vip.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="com.jfkj.vip.permission.PROCESS_PUSH_MSG" /> <!-- 兼容 flyme3.0 配置权限 -->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
+    <uses-permission android:name="com.jfkj.vip.push.permission.MESSAGE" />
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.jfkj.vip.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+<!--        <activity-->
+<!--            android:name="com.yanzhenjie.album.app.album.AlbumActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />-->
+        <activity
+            android:name=".ui.activity.GroupMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"/>
+        <activity
+            android:name=".ui.activity.LookCirclePicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.party.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.PartyAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.ReleasePartyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.EnrollActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.PartyComplaintsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.PartyDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.party.MyCrushIceTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.PartyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.CrushIceTaskHallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.AddUserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.InsertUserinfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SystemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.PlayVideoActivity"
+            android:theme="@style/AppTheme.transparent" />
+        <activity
+            android:name=".TIM.redpack.chatroom.MatchCharacterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.chatroom.MyCharacterTextDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.chatroom.MyCharacterTextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.chatroom.AnswerSubmitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.chatroom.CharacterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.chatroom.SquareRuleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ui.mine.CertificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ResultRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.CarryScaleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.CarryOverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.BindSettleAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.SettleAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.RankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".TIM.redpack.group.GroupAddOrDelMeberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.group.GroupMessageCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.group.ApplyJoinGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.group.GroupInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.group.UpGradeSuperGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.game.AdventureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.redpack.RedPackageDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ui.activity.SendRedPackageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".TIM.component.video.CameraActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ui.activity.FriendProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.GiftGivingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ChooseLikePersonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.BuyMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.RewardruleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.InviteFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SuperActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.MatchingdegreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.MinecharacterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.MineCharacterttestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.AnswersummaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.CharacterttestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.CharactertstartestActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.RuleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.GroupcenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SelectAreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ChatFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.RedPacketDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.PictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.RedPacketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ChatsetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.NewfriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.DetailspacketsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.AdditiongroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.MinefriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.GroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SelectfriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.UnmannedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.GroupsetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SelectpackettimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.RecordvideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.AuditresultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.AuditingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.StartvideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.UploadpicturesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.Login_passwordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.Login_accountpasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.UserheadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SelectpacketsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ClubnoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ClubnameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity android:name="com.yanzhenjie.album.app.camera.CameraActivity" />
+        <activity
+            android:name=".ui.activity.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.View" />
+
+                <data
+                    android:host="com.tencent.qcloud"
+                    android:path="/detail"
+                    android:scheme="pushscheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.SystemnotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SelectSexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.LoginAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.SetpasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.InputcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.LoginregisternextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ForgetInputcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.DeletemembersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.transparent.GUIDE">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="jfkj"
+                    android:scheme="iyou" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.ChooseLikePersonActivity2"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.Loginregister_phone_Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.transparent.GUIDE.NO.BG"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".TIM.helper.TRTCActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.UploadingVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ChangePhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ChangePhoneYzmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.CommChangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.PrivilegeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.home.UserDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.mine.ToolbarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.home.ReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.discovery.CircleActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.discovery.MyMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.discovery.RankListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.PersonalPhotoActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ChargeRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.GiftActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.home.AddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.discovery.PostingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.discovery.ChooseLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.ClubmessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.activity.VideocallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".TIM.component.video.VideoViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.component.photoview.PhotoViewActivity"
+            android:screenOrientation="fullSensor"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".ui.activity.TRTCVideoRoomActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/NewActivityTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.mine.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ChangeNewPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.UploadVideoActivity"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.home.DynamicDetailActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/ActivityBackGround"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.discovery.SetLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.VIPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.SendGiftActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.ObtainGiftActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.PersonalPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.SetHomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".ui.mine.SetStarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround" />
+        <activity
+            android:name=".TIM.modules.group.info.GroupInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".TIM.component.SelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityBackGround"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.jfkj.vip.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <activity
+            android:name="com.jfkj.vip.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 这里填写你申请的app id -->
+                <data android:scheme="wx4daa19e679a154de" />
+            </intent-filter>
+        </activity> <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <activity
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="@string/AK" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="f0d738208ecf0429f19975b2" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="a90685ff-ebad-4df3-a265-3d4bb8e3a389" />
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="11178" /> <!-- 多渠道打包 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver
+            android:name=".widget.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.jfkj.vip" />
+            </intent-filter>
+        </receiver> <!-- 这里的 com.tencent.qcloud.tim.demo.thirdpush.MEIZUPushReceiver 修改成您 App 中的完整类名 -->
+        <!-- ********魅族推送设置 start******** -->
+        <receiver
+            android:name=".widget.JGBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.jfkj.vip" />
+            </intent-filter>
+        </receiver> <!-- ********魅族推送设置 end******** -->
+        <!-- ********vivo 推送设置 start******** -->
+        <receiver android:name=".receiver.MEIZUPushReceiver">
+            <intent-filter>
+
+                <!-- 接收 push 消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收 register 消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收 unregister 消息 -->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+                <!-- 兼容低版本 Flyme3 推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.tencent.qcloud.tim.demo.thirdpush" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.VIVOPushMessageReceiverImpl">
+            <intent-filter>
+
+                <!-- 接收 push 消息 -->
+                <action android:name="com.vivo.pushclient.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER" />
+            </intent-filter>
+        </receiver> <!-- ********vivo 推送设置 end******** -->
+        <!-- 这里的 com.vivo.push.app_id ，com.vivo.push.api_key 由 vivo 开放平台生成 -->
+        <!-- 这里的 com.tencent.qcloud.tim.demo.thirdpush.VIVOPushMessageReceiverImpl 修改成您 App 中的完整类名 -->
+        <!-- push 应用定义消息 receiver 声明 -->
+        <receiver
+            android:name=".receiver.XiaomiMsgReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver> <!-- <meta-data -->
+        <!-- android:name="com.huawei.hms.client.appid" -->
+        <!-- android:value="appid=102018049" /> &lt;!&ndash; 这里的 appid 值修改为您的华为推送 App ID &ndash;&gt; -->
+        <!-- <provider -->
+        <!-- android:name="com.huawei.hms.update.provider.UpdateProvider" -->
+        <!-- android:authorities="com.tencent.qcloud.tim.tuikit.hms.update.provider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true" /> -->
+        <!-- <provider -->
+        <!-- android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" -->
+        <!-- android:authorities="com.tencent.qcloud.tim.tuikit.updateSdk.fileProvider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.huawei.android.hms.agent.common.HMSAgentActivity" -->
+        <!-- android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:hardwareAccelerated="true" -->
+        <!-- android:theme="@android:style/Theme.Translucent"> -->
+        <!-- <meta-data -->
+        <!-- android:name="hwc-theme" -->
+        <!-- android:value="androidhwext:style/Theme.Emui.Translucent" /> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.huawei.hms.activity.BridgeActivity" -->
+        <!-- android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:hardwareAccelerated="true" -->
+        <!-- android:theme="@android:style/Theme.Translucent"> -->
+        <!-- <meta-data -->
+        <!-- android:name="hwc-theme" -->
+        <!-- android:value="androidhwext:style/Theme.Emui.Translucent" /> -->
+        <!-- </activity> -->
+        <!-- <service -->
+        <!-- android:name="com.huawei.hms.support.api.push.service.HmsMsgService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- android:process=":pushservice"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.huawei.push.msg.NOTIFY_MSG" /> -->
+        <!-- <action android:name="com.huawei.push.msg.PASSBY_MSG" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> &lt;!&ndash; 这里的 com.tencent.qcloud.tim.demo.thirdpush.HUAWEIPushReceiver 修改成您 App 中的完整类名 &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name=".receiver.HUAWEIPushReceiver" -->
+        <!-- android:permission="com.tencent.qcloud.tim.tuikit.permission.PROCESS_PUSH_MSG"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; 必须,用于接收 token &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.REGISTRATION" /> -->
+        <!-- &lt;!&ndash; 必须, 用于接收透传消息 &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.RECEIVE" /> -->
+        <!-- &lt;!&ndash; 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <service
+            android:name=".widget.MoreSupportService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".receiver.HUAWEIPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true" />
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true" /> <!-- 这里的 com.tencent.qcloud.uipojo.thirdpush.XiaomiMsgReceiver 修改成您 App 中的完整类名 -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+        <service
+            android:name="com.heytap.mcssdk.PushService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.heytap.mcssdk.AppPushService"
+            android:permission="com.heytap.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".service.FloatViewService" />
+        <service android:name=".service.VideoFloatService" />
+    </application>
+
+</manifest>

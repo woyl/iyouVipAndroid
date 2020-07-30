@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_head"
+    android:background="@color/color_ffffff"
+    tools:context=".ui.activity.SelectfriendActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/title_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="取消"/>
+
+        <TextView
+            android:id="@+id/title_center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="17sp"
+            android:text="选择好友"
+            android:textColor="@color/color_ff000000"/>
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/color_ffffff"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:textSize="15sp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shap_bt_two_bg"
+            android:text="邀请"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="添加好友"/>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<!--    <com.jfkj.im.TIM.modules.contact.ContactListView-->
+<!--        android:id="@+id/group_create_member_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+
+</LinearLayout>

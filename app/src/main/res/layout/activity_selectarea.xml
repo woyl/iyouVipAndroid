@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SelectAreaActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/black_iv"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/back_black_iv"
+ />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13sp"
+        android:text="选择区域/国家"
+        android:textColor="@color/color_ff000000"
+        android:textSize="17sp"
+        android:layout_centerInParent="true"></TextView>
+
+</RelativeLayout>
+
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.yanzhenjie.recyclerview.SwipeRecyclerView>
+</LinearLayout>

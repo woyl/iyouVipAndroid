@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test_bg_nor"
+    tools:context=".ui.activity.MatchingdegreeActivity"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_iv"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/back_iv"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="性格测试"
+        android:textColor="@color/color_ffffff"
+        android:textSize="23sp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/shape_matchingdegree_number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head1_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="35dp"
+            android:src="@drawable/default_head_iv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="@color/color_ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head2_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="35dp"
+            android:src="@drawable/default_head_iv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_matchingdegree_title"
+            android:paddingLeft="18dp"
+            android:paddingTop="7dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="7dp"
+            android:text="匹配度"
+            android:textColor="@color/color_ff000000"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/swiperecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="19dp"></com.yanzhenjie.recyclerview.SwipeRecyclerView>
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

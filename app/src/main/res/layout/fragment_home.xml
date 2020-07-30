@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ff161823"
+    android:orientation="vertical">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:use_type="use_padding_top" />
+
+
+    <com.google.android.material.tabs.TabLayout
+
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:tabIndicator="@drawable/layer_tab_indicator_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status"
+        app:tabBackground="@null"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/color_ffffff"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+
+        app:tabTextColor="@color/color_ffffff" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"
+        android:src="@mipmap/icon_more_white"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tabLayout" />
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/squre_ly"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:layout_marginBottom="15dp"-->
+    <!--        android:maxWidth="120dp"-->
+    <!--        android:focusable="true"-->
+    <!--        android:background="@drawable/shape_squre_home"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        android:gravity="center"-->
+    <!--        tools:ignore="MissingConstraints">-->
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--            android:id="@+id/head_iv"-->
+    <!--            android:layout_width="22dp"-->
+    <!--            android:layout_height="22dp"-->
+    <!--            android:layout_marginStart="3dp"-->
+    <!--            android:background="@drawable/default_head_iv"-->
+    <!--            tools:ignore="MissingConstraints" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_message"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="5dp"-->
+    <!--            android:layout_marginBottom="4dp"-->
+    <!--            android:maxWidth="120dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:layout_marginRight="30dp"-->
+    <!--            android:text="广场消息"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:textColor="@color/color_ffffff"-->
+    <!--            android:textSize="12sp"-->
+    <!--            tools:ignore="MissingConstraints" />-->
+    <!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c111111"
+        android:gravity="center"
+        android:orientation="vertical"
+         >
+
+        <TextView
+            android:gravity="center"
+            android:drawableTop="@mipmap/icon_no_net_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="网络错误"
+            android:textColor="#ff767676"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:text="请检查网络连接后重试"
+            android:textColor="#ff767676"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_chong"
+            android:layout_width="105dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="82dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="82dp"
+            android:background="@drawable/shape_base_btn_white_20dp"
+            android:gravity="center"
+            android:text="重试"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ly"
+    android:orientation="vertical">
+
+<!--     android:adjustViewBounds="true"-->
+    <com.jfkj.im.view.CustomRoundAngleImageView
+        android:id="@+id/iv_image"
+        android:adjustViewBounds="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/add_user_iv" />
+
+    <com.jfkj.im.view.MyScaleImageView
+        android:id="@+id/img_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

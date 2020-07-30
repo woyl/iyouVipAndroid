@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.activity.LoginregisternextActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_activity_brg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <include
+        android:id="@+id/include_title"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:id="@+id/login_register_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="28dp"
+        android:text="登录/注册 更精彩"
+        android:textColor="@color/color_ffffff"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/ly_input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        app:layout_constraintTop_toBottomOf="@id/login_register_tv"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:textColor="#ffffff"
+            android:textColorHint="#40ffffff"
+            android:id="@+id/et_input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:hint="输入手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:background="@null"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textSize="15sp" />
+
+
+
+
+        <View
+            android:background="#99ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/clear_et_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/clear_et_iv"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ly_input_phone"
+        app:layout_constraintRight_toRightOf="@+id/ly_input_phone"
+        app:layout_constraintTop_toTopOf="@+id/ly_input_phone"
+        tools:ignore="MissingConstraints" />
+
+    <!--android:alpha="0.5"-->
+    <TextView
+        android:gravity="center"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:textColor="#333333"
+        android:alpha="0.4"
+        android:id="@+id/next_btn"
+        android:layout_marginTop="40dp"
+        android:enabled="false"
+        android:text="下一步"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ly_input_phone"
+        tools:ignore="MissingConstraints"
+        android:layout_height="45dp"
+        android:layout_width="match_parent" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_btn"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/password_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:paddingBottom="3dp"
+            android:textSize="@dimen/sp_14"
+            android:text="密码登录"
+            tools:ignore="MissingConstraints" />
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

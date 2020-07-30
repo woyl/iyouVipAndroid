@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    tools:ignore="RtlHardcoded">
+
+
+    <TextView
+        android:text="热门城市"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="36dp"
+        android:paddingLeft="16dp"
+        android:drawableStart="@mipmap/hot"
+        android:drawablePadding="4dp"
+        android:background="@color/c1d1d1d"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+    <com.jfkj.im.view.WrapHeightGridView
+        android:background="@color/c111111"
+        android:id="@+id/gridview_hot_city"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="12dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingLeft="16dp"
+        android:paddingRight="36dp"
+        android:scrollbars="none"
+        android:verticalSpacing="12dp" />
+</LinearLayout>

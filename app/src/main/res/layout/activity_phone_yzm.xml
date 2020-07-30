@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ClubnameActivity">
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top" />
+
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="14dp"
+        android:padding="5dp"
+        android:src="@mipmap/iv_back_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="26dp"
+        android:text="输入验证码"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        tools:ignore="MissingConstraints"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/c767676"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        tools:text="短信已经发送至+"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_yzm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/shape_club_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone">
+
+        <EditText
+            android:id="@+id/edit_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:hint="输入验证码"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColorHint="@color/c767676"
+            android:textColor="@color/c767676"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_clear_input"/>
+
+        <ImageView
+            android:id="@+id/iv_clear_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/clear_et_iv"
+            android:layout_marginRight="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/view_line"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_send_yzm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="重新发送"
+            android:textColor="@color/c767676"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/c767676"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_code"
+            app:layout_constraintRight_toLeftOf="@+id/tv_send_yzm"
+            app:layout_constraintTop_toTopOf="@+id/edit_code"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/violet_tv"
+        android:layout_marginTop="50dp"
+        android:alpha="1"
+        android:background="@drawable/shap_bt_two_bg"
+        android:text="确认"
+        app:layout_constraintTop_toBottomOf="@id/layout_yzm"
+        tools:ignore="MissingConstraints"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

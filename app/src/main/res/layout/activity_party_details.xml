@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_666666"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_brg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:use_type="use_padding_top" />
+
+
+    <include layout="@layout/include_title_white"/>
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_nike_name"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blackpink"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_vip_level"
+            android:gravity="center"
+            android:background="@mipmap/icon_mine_vip_brg"
+            android:layout_marginStart="7dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="VIP3"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/icon_play_rl_brg"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_marginLeft="15dp"
+            android:id="@+id/tv_title_message"
+            android:layout_marginTop="16dp"
+            android:layout_width="174dp"
+            android:layout_height="24dp"
+            android:text=" 1 "
+            android:textColor="#fff2f2f2"
+            android:textSize="17sp"
+            />
+
+
+
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginRight="5dp"
+                android:id="@+id/tv_welfare"
+                android:layout_below="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_diamonds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_diamond_yellow"
+                android:text=" "
+                android:textColor="#ffef4769"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/icon_play_rl_brg"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_marginStart="@dimen/album_dp_15"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/icom_position"
+            android:drawablePadding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="#fff2f2f2"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_cadddate"
+            android:layout_marginStart="15dp"
+            android:drawableStart="@drawable/icom_time"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="#fff2f2f2"
+            android:textSize="14sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/tv_introduce"
+            android:drawableStart="@drawable/icon_plan"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="#fff2f2f2"
+            android:textSize="14sp"
+            />
+
+
+
+
+        <RelativeLayout
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_max_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="     "
+                android:textSize="14sp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_sign_count"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  "
+                android:textSize="14sp"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+
+        android:id="@+id/tv_submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="39dp"
+        android:gravity="center"
+        android:layout_width="105dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

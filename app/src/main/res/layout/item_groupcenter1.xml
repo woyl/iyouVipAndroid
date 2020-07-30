@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleimageview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/default_head_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="用户名"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/circleimageview"
+        app:layout_constraintTop_toTopOf="@id/circleimageview"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        tools:text="邀请信息"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/circleimageview"
+        app:layout_constraintLeft_toRightOf="@id/circleimageview"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="状态"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:id="@+id/ly_reject_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleimageview"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shap_rejuse_bg"
+            android:paddingLeft="50dp"
+            android:paddingTop="9dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="9dp"
+            android:text="拒绝"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/shap_bt_two_color_bg"
+            android:paddingLeft="50dp"
+            android:paddingTop="9dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="9dp"
+            android:text="接受"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/shape_item_groupmessagecenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ly_reject_accept"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="用户名:"
+            android:textColor="@color/c767676" />
+
+        <TextView
+            android:id="@+id/tv_enter_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/tv_nickname"
+            android:text="加群信息"
+            android:textColor="@color/c767676" />
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_enter_message"
+            android:layout_alignParentStart="true"
+            android:visibility="invisible"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="群主名字:"
+            android:textColor="@color/color_ff4d6c" />
+
+        <TextView
+            android:id="@+id/tv_group_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_enter_message"
+            android:layout_toStartOf="@+id/tv_answer"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            android:layout_toEndOf="@+id/tv_group_name"
+            android:text="群主回复的信息"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/tv_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_enter_message"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            android:background="@drawable/shape_groupmessage_accept"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="3dp"
+            android:text="回复"
+            android:textColor="@color/color_ff7947ff" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/c1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativelayout"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

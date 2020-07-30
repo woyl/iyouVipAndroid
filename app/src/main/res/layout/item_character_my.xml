@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    >
+
+    <RelativeLayout
+
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/view_1"
+            android:layout_centerHorizontal="true"
+            android:background="#6632D5F1"
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"/>
+
+        <View
+            android:id="@+id/view_point"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_item_character"
+            android:layout_width="8dp"
+            android:layout_height="8dp"/>
+
+        <View
+
+            android:id="@+id/view_2"
+            android:layout_below="@+id/view_point"
+            android:layout_centerHorizontal="true"
+            android:background="#6632D5F1"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/shape_item_character_lllayout"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toRightOf="@+id/img_1"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我发布了性格测试"
+                android:textSize="16sp"
+                android:textColor="@color/color_ffffff"/>
+            <TextView
+                android:textColor="#ffbbbbbb"
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/font_12sp"
+                android:text="2020-02-06 15:37"/>
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_state"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="#ff32d5f1"
+            android:layout_centerVertical="true"
+            android:text="进行中"
+            android:layout_gravity="center"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+

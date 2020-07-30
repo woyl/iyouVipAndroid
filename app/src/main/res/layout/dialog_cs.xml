@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:background="@drawable/shape_dialog_selectsex">
+
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基础比例"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_baserate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="40%"
+            android:textColor="@color/cFF0D52"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+       android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成功邀请1位男性付费用户    "
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textColor="@color/cFF2B66" />
+
+        <TextView
+            android:id="@+id/tv_male_line"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_width="8.5dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@drawable/shap_line_bg"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传个人视频且审核通过    "
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_personal_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textColor="@color/cFF2B66" />
+
+        <TextView
+            android:id="@+id/tv_personal_video_line"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_width="8.5dp"
+            android:layout_height="1dp"
+            android:background="@drawable/shap_line_bg"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成功邀请1名女生加入I you    "
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textColor="@color/cFF2B66" />
+
+        <TextView
+            android:id="@+id/tv_female_line"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_width="8.5dp"
+            android:layout_height="1dp"
+            android:background="@drawable/shap_line_bg"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价I you圈动态"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_comment_dynamics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textColor="@color/cFF2B66" />
+
+        <TextView
+            android:id="@+id/tv_comment_dynamics_line"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_width="8.5dp"
+            android:visibility="gone"
+            android:layout_height="1dp"
+            android:background="@drawable/shap_line_bg"
+            />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在I you圈发布图片或者视频"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/share_dynamics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textColor="@color/cFF2B66" />
+
+        <TextView
+            android:id="@+id/share_dynamics_line"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_width="8.5dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@drawable/shap_line_bg"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="38dp"
+        android:paddingEnd="38dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:background="@drawable/shap_bt_two_black_bg"/>
+
+
+
+
+
+
+</LinearLayout>

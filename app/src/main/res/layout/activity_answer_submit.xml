@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_head"
+    android:background="@mipmap/test_bg_nor"
+    tools:context="com.jfkj.im.TIM.redpack.chatroom.AnswerSubmitActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_title_right_icon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        android:background="@mipmap/icon_close_white"/>
+
+    <ImageView
+        android:layout_marginStart="47dp"
+        android:id="@+id/iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_right_icon1"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/icon_character_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_marginTop="24dp"
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交成功！"
+        android:textSize="23sp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="#ffbbbbbb"
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        android:text="游戏结束后匹配度前10名用户可获得红包奖励"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_2"
+        android:background="@drawable/shape_answer_ed_brg"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="37dp"
+
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal">
+
+        <EditText
+            android:textColorHint="@color/color_ffffff"
+            android:paddingStart="20dp"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:id="@+id/et_money"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:singleLine="true"
+
+            android:drawableLeft="@mipmap/icon_diamond_yellow"
+
+            android:inputType="number"
+            android:paddingEnd="15dp"
+            android:drawablePadding="5dp" />
+        
+        <View
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/tv_total"
+            android:layout_centerVertical="true"
+            android:background="#1EDAF0"
+            android:layout_width="0.5dp"
+            android:layout_height="13.5dp"/>
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:textColor="#ff1edaf0"
+            android:textSize="12sp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总奖励"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_1"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/c333333"
+        android:text="确认发布"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

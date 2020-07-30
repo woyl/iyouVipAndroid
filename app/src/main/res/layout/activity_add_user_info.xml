@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.jfkj.im.ui.mine.AddUserInfoActivity">
+
+
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:src="@mipmap/iv_back_black"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="修改手机号"
+        android:textColor="@color/color_ff000000"
+        android:textSize="23sp"
+        tools:ignore="MissingConstraints"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_input_content"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:padding="15dp"
+        android:background="@drawable/shape_club_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+       >
+
+        <EditText
+            android:id="@+id/edit_input_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请填写个人描述"
+            android:textSize="15sp"
+            android:textColor="@color/color_ff000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_text_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0/50"
+            android:textSize="12sp"
+            android:textColor="#FFBFBBC9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:clickable="false"
+        android:id="@+id/tv_confirm"
+        style="@style/violet_tv"
+        android:layout_marginTop="40dp"
+        android:alpha="0.5"
+        android:background="@drawable/shape_btn_uncheck"
+        android:text="完成"
+        app:layout_constraintTop_toBottomOf="@id/layout_input"
+        tools:ignore="MissingConstraints"/>
+
+
+
+</LinearLayout>

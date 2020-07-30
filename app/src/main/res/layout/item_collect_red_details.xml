@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+
+    xmlns:toolstext="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+
+
+    android:orientation="vertical">
+
+    
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.jfkj.im.view.CirImageView
+            android:layout_marginRight="5dp"
+            android:id="@+id/cir_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp" />
+        <RelativeLayout
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:maxWidth="150dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                toolstext:text="蒲栋"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:background="@mipmap/icon_mine_vip_brg"
+                android:layout_toEndOf="@+id/tv_name"
+                toolstext:ignore="MissingPrefix" />
+            <TextView
+
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/tv_name"
+                toolstext:text="20:22"
+                android:textSize="@dimen/sp_12" />
+            <TextView
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_money_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                toolstext:text="23"
+                android:drawableEnd="@mipmap/icon_coin_yellow"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:id="@+id/tv_best"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cEF4769"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="3dp"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                android:layout_below="@+id/tv_money_d"
+                android:drawableStart="@mipmap/redbag_icon_best_yellow"
+                android:text="手气最佳"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="15dp"
+        android:background="#F8F6FA"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+
+
+</LinearLayout>

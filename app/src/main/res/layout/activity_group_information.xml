@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c111111"
+    tools:context="com.jfkj.im.TIM.redpack.group.GroupInformationActivity">
+
+    <include
+
+        android:id="@+id/include"
+        layout="@layout/include_title_transparent" />
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints">
+
+        <com.jfkj.im.view.CirImageView
+            android:id="@+id/cir_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                tools:text="咕咕咕咕咕咕咕咕咕咕咕咕咕咕咕咕咕咕" />
+
+            <TextView
+                android:id="@+id/tv_vip_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/tv_name"
+                android:background="@mipmap/icon_mine_vip_brg"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                tools:text="VIP0" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="5dp"
+                android:textColor="#767676"
+                tools:text="上海市" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="3dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/cEF4769"
+                android:textSize="13sp"
+                tools:text="x50" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:text="每日礼物"
+                android:textColor="#767676" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/ll_head"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="俱乐部公告"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#ff767676"
+            tools:text="当地时间2019年11月17日，刻赤海峡，俄罗斯当日开始向乌克兰转交在去年11月刻赤海峡冲突中扣留的乌方船只。" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/ll_content"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计送出礼物"
+            android:textColor="@color/white" />
+
+        <TextView
+
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawablePadding="3dp"
+            android:textColor="@color/cEF4769"
+            tools:text="1.4W" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/rl_1"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_m_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="俱乐部成员"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_m"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_add"
+            app:layout_constraintTop_toBottomOf="@+id/tv_m_1" />
+
+        <FrameLayout
+            android:id="@+id/fl_hide_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@mipmap/privacy_bg">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/privacy_src"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_base_btn_white_20dp"
+            android:gravity="center"
+            android:textColor="@color/c333333"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_m"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

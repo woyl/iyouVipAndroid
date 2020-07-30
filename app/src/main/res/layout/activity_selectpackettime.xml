@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_head"
+
+    tools:context=".ui.activity.SelectpackettimeActivity">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:id="@+id/select_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="26dp"
+        android:text="选择每日红包发放时间"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+
+        android:text="每天到了指定时间俱乐部成员将会收到礼物"
+        android:textColor="#ff767676"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/select_time_tv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:text="20:00"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hint_tv"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/more_iv"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/time_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/time_tv"
+        tools:ignore="MissingConstraints" />
+
+    <View
+
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="#292929"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_tv"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_height="45dp"
+        android:textSize="16sp"
+        android:textColor="@color/c333333"
+        android:id="@+id/next_btn"
+        style="@style/tv_sure_bg"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:text="确认"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

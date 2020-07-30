@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.jfkj.im.TIM.component.TitleBarLayout
+        android:id="@+id/conversation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#1Affffff" />
+
+    <com.jfkj.im.TIM.modules.conversation.ConversationListLayout
+        android:background="@color/c111111"
+        android:id="@+id/conversation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jfkj.im.view.floatview.widget.FloatViewLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_float"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:orientation="vertical">
+
+        <com.zhy.autolayout.AutoFrameLayout
+            android:id="@+id/main_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/c111111"
+            android:orientation="horizontal"
+
+            android:paddingBottom="4dp">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/btn_home"
+                    style="@style/numberbottombutton"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_tab_home"
+                    android:scaleType="center" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_interactive"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top">
+
+                <ImageView
+                    android:id="@+id/btn_interaction"
+                    style="@style/numberbottombutton"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_tab_interactive" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_interaction_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/btn_interaction"
+                    android:background="@drawable/shape_red_text_bg"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="1dp"
+                    android:text="0"
+
+                    android:visibility="gone"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="10sp"
+                      />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_club"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1">
+
+                <ImageView
+                    android:id="@+id/btn_club"
+                    style="@style/numberbottombutton"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_tab_club" />
+
+
+<!--                -->
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_group_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/btn_club"
+                    android:background="@drawable/shape_red_text_bg"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="1dp"
+                    tools:text="0"
+
+                    android:visibility="gone"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="10sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_find"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9">
+
+                <ImageView
+                    android:id="@+id/btn_find"
+                    style="@style/numberbottombutton"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_tab_find" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_find"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/btn_find"
+                    android:background="@drawable/shape_red_text_bg"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="3dp"
+                 />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9">
+
+                <ImageView
+                    android:id="@+id/btn_mine"
+                    style="@style/numberbottombutton"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/icon_tab_mine"
+                    android:scaleType="center"
+                    android:text="我"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.jfkj.im.view.floatview.widget.FloatViewLayout>

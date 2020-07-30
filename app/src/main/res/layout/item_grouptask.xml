@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+
+    android:id="@+id/rl_layout"
+   >
+
+<!--    @drawable/mine_shape_club_brg-->
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:id="@+id/ll_2"
+        android:layout_width="33dp"
+        android:layout_height="33dp">
+        <ImageView
+
+
+            android:layout_centerVertical="true"
+            android:id="@+id/img_club_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_club_ordinary" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/rl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/ll_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:textStyle="bold"
+            android:drawablePadding="3dp"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="咕咕咕咕群"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_heat"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/tv_name"
+            android:src="@mipmap/icon_super_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="NotSibling">
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:src="@mipmap/icon_diamond_yellow" />
+
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:id="@+id/tv_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x50/人"
+                android:textColor="#ffbbbbbb"
+                android:textSize="11sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="每日奖励"
+                android:textColor="#ff767676"
+                android:textSize="11sp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

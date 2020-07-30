@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff161823">
+
+    <ImageView
+        android:id="@+id/iv_user_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:background="@mipmap/img_avatar_01"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription" />
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:padding="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        android:src="@drawable/back_iv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textColor="@color/color_ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title_back"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title_back"
+        tools:text="我是标题"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_title_back"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title_back"
+        android:src="@mipmap/icon_more_white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:text="字母"
+        android:background="#F8F6FA"
+        android:textColor="@color/color_ff000000"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ly_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/select_iv"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/club_radio_btn_sel" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/default_head_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_head_iv" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="用户名"
+            android:textColor="@color/color_ff000000"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_level"
+            android:paddingLeft="6dp"
+            android:paddingTop="1dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="1dp"
+            android:text="v0"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_ffffff"
+            android:background="@drawable/shape_orange_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F8F6FA"/>
+</LinearLayout>

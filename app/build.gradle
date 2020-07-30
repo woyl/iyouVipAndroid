@@ -1,0 +1,289 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.jfkj.vip"   //签名  7769f7470d423de9a214278e72b013e4
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 20200707        //version code 更新作为判断依据 每次发布行版本 需要修改这个值为对应的日期即可
+        versionName "1.0.7"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', "arm64-v8a"
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.jfkj.vip",
+                JPUSH_APPKEY : "f0d738208ecf0429f19975b2", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = " ${variant.applicationId}- ${buildType.name}-${defaultConfig.versionCode}-${releaseTime()}-${variant.productFlavors[0].name}.apk"
+
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file('jfkjvip.jks')
+            storePassword 'jfkjvip'
+            keyAlias 'jfkjvip'
+            keyPassword 'jfkjvip'
+        }
+        sbGoogle {
+            storeFile file('jfkjvip.jks')
+            storePassword "jfkjvip"
+            keyAlias "jfkjvip"
+            keyPassword "jfkjvip"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sbGoogle
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    flavorDimensions "default"
+    productFlavors {
+//        app {
+//            dimension "default"
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "app"]
+//        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+
+        Iyou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Iyou"]
+        }
+
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+        }
+        samsung {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Samsung"]
+        }
+        meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+        }
+        sanliuling {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sanliuling"]
+        }
+        sougou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sougou"]
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd_HH-mm-ss", TimeZone.getDefault());
+}
+
+ext {
+    butterknifeVersion = '10.2.0'
+    retrofitVersion = '2.6.2'
+    okhttp3 = '4.2.2'
+    rxjavaVersion = '2.1.11'
+    rxandroidVersion = "2.0.2"
+    okhttputils = "2.6.2";
+    fastjson = "1.2.61";
+    autolayout = "1.4.5"
+    glide = "4.10.0"
+    rxbinding = "2.0.0"
+    autosize = "1.1.2"
+    recyclerview = "1.0.0"
+    xrecyclerview = '1.6.0'
+    yanzhenjierecyclerview = '1.3.2'
+    permissiongen = '0.0.6'
+    circleimageview = '3.0.1'
+    xtablayout = '1.1.3'
+    leakcanary = '1.6.2'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.protobuf:protobuf-java:3.5.0'
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjavaVersion"
+    implementation "com.zhy:okhttputils:$okhttputils"
+    implementation "com.squareup.retrofit2:converter-scalars:$retrofitVersion"
+    implementation "com.alibaba:fastjson:$fastjson"
+    implementation "com.zhy:autolayout:$autolayout"
+    implementation "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rxbinding"
+    implementation "me.jessyan:autosize:$autosize"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview"
+    implementation "com.jcodecraeer:xrecyclerview:$xrecyclerview"
+    implementation "com.yanzhenjie.recyclerview:x:$yanzhenjierecyclerview"
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.amap.api:location:latest.integration'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation "com.lovedise:permissiongen:$permissiongen"
+    implementation 'pub.devrel:easypermissions:1.1.3'
+    implementation "de.hdodenhof:circleimageview:$circleimageview"
+    implementation files('libs/netty-tcp-4.1.33-1.0.jar')
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'org.kymjs.kjframe:kjframe:2.4.6.2'
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation 'com.google.protobuf:protobuf-java:3.9.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation "com.androidkun:XTabLayout:$xtablayout"
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.nbsp:library:1.8'
+    implementation 'com.blankj:utilcode:1.25.9'
+    implementation 'com.tencent.liteav:LiteAVSDK_TRTC:latest.release'
+    implementation 'com.lovedise:permissiongen:0.0.6'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'me.relex:circleindicator:2.1.4'
+    implementation project(path: ':videoplayer')
+    implementation project(path: ':videocache')
+    implementation project(path: ':picturechoose')
+    implementation project(path: ':wheelview')
+    implementation project(path: ':pickerview')
+    implementation files('libs/zxing-core-3.2.1.jar')
+    implementation project(path: ':ucrop')
+    implementation project(path: ':picture_library')
+    implementation project(path: ':imageviewer')
+    implementation project(path: ':photoviewers')
+    implementation 'com.lzy.net:okgo:3.0.4'
+
+    //    implementation 'ywl.ywl5320:wlmedia:1.0.6'
+    implementation 'com.github.open-android:JieCaoVideoPlayer:0.1.0'
+    implementation 'com.github.dfqin:grantor:2.5'
+    implementation 'com.kk.taurus.playerbase:playerbase:3.3.6'
+    implementation 'cn.jiguang.sdk:jcore:2.2.8'
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'
+
+    //    implementation 'cn.jzvd:jiaozivideoplayer:7.2.0'
+    implementation 'org.xutils:xutils:3.5.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.tencent.imsdk:imsdk:4.6.101'
+    implementation 'com.github.promeg:tinypinyin:1.0.0'
+
+    // ~80KB
+
+    //    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+
+    //    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+
+    //implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
+
+    // 添加下面的内容
+    //  implementation(name: 'alipaySdk-15.7.4-20200228192319-noUtdid', ext: 'aar')
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation('lin.jerrylin0322.reswipecard:reswipecard:1.0.0') {
+        exclude module: 'recyclerview'
+    }
+
+    //    compile 'me.yuqirong:cardswipelayout:1.0.0'
+
+    //    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.3'
+    implementation 'com.yanzhenjie:album:2.1.3'
+    implementation files('libs/aspectjrt-1.7.3.jar')
+    implementation files('libs/isoparser-1.0.6.jar')
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.+@aar'
+    implementation(name: 'vivo_pushsdk-v2.9.0.0', ext: 'aar')
+    implementation files('libs/mcssdk-2.0.2.jar')
+    implementation 'com.huawei.hms:push:4.0.2.300'
+    implementation 'com.airbnb.android:lottie:2.8.0'
+    implementation 'com.google.dagger:dagger:2.24'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
+    implementation files('libs/MiPush_SDK_Client_3_7_6.jar')
+
+    implementation(name: 'alipaySdk-15.7.4-20200228192259', ext: 'aar')
+
+    implementation 'com.github.qingmei2:rximagepicker:0.2.0'
+    implementation 'org.litepal.android:java:3.0.0'
+    implementation 'com.android.support:design:29.0.2'
+//
+//    //拼音
+
+
+    //  拆开礼物动画
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.5.3'
+    implementation 'me.relex:circleindicator:2.1.4'
+
+    //bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+//    implementation ('com.alibaba.android:vlayout:1.2.8@aar') {
+//        transitive = true
+//    }
+
+//    implementation 'androidx.paging:paging-runtime-ktx:2.1.2'
+
+//    群头像合成
+//    implementation 'com.github.Othershe:CombineBitmap:1.0.5'
+
+    //视频压缩 //https://github.com/Tourenathan-G5organisation/SiliCompressor https://github.com/wuxiaoqiang625/VideoCompress
+//    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.0'
+}

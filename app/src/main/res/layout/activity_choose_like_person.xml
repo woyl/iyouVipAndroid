@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ChooseLikePersonActivity">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="选择9位您想认识的女生"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="右滑卡片选择"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose"
+        app:layout_constraintStart_toStartOf="@+id/tv_choose"
+        app:layout_constraintEnd_toEndOf="@+id/tv_choose"
+        app:layout_constraintBottom_toTopOf= "@+id/recycler"
+        tools:ignore="MissingConstraints">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_head"
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="50dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_gravity="center"
+            tools:text="1/2"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+
+
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/ll_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/video_btn_cancel_red"
+        app:layout_constraintBottom_toTopOf="@+id/img_1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/img_sel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/video_btn_complete_red"
+        app:layout_constraintBottom_toTopOf="@+id/img_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/img_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="30dp"
+        android:background="@mipmap/icon_identification_nor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="#ffbbbbbb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="30dp"
+        android:text="100%经过I you官方视频真人验证"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_1"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

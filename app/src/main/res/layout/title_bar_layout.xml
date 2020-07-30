@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_title_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c111111"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/page_title_left_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:minWidth="80dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <ImageView
+            android:id="@+id/page_title_left_icon"
+            android:layout_width="22dp"
+
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+
+            android:background="@mipmap/nav_icon_photo_black"
+            android:clickable="false" />
+
+        <TextView
+            android:id="@+id/page_title_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black_font_color"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:maxWidth="130dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="这里是名称名称啊"
+        android:textColor="@color/white"
+        android:textSize="16.3sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/img_no_disturb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/page_title"
+        android:background="@mipmap/no_rao"/>
+
+    <LinearLayout
+        android:id="@+id/page_title_right_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical|right"
+        android:minWidth="80dp"
+        android:orientation="horizontal"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/page_title_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/black_font_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/page_title_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:clickable="false"
+            android:src="@drawable/ic_personal_member" />
+    </LinearLayout>
+
+</RelativeLayout>

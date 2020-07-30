@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_bg_superclub"
+    tools:context="com.jfkj.im.TIM.redpack.group.UpGradeSuperGroupActivity"
+    tools:ignore="MissingConstraints">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_title_transparent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="162dp"
+        android:src="@drawable/words_superclub"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ly_label"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:alpha="0.65"-->
+<!--        android:background="@drawable/shape_supe_club"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingLeft="44dp"-->
+<!--        android:paddingTop="4dp"-->
+<!--        android:paddingRight="44dp"-->
+<!--        android:paddingBottom="4dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/iv_super_club">-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="俱乐部专属标签"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ly_label"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ly_label" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/add_ly"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:alpha="0.65"-->
+<!--        android:background="@drawable/shape_supe_club"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingLeft="15dp"-->
+<!--        android:paddingTop="4dp"-->
+<!--        android:paddingRight="15dp"-->
+<!--        android:paddingBottom="4dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ly_label">-->
+
+
+<!--    </LinearLayout>-->
+
+<!--    <androidx.appcompat.widget.AppCompatTextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="可添加100个俱乐部成员"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/add_ly"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ly_label"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/add_ly" />-->
+
+    <TextView
+
+        android:id="@+id/tv_upgrade"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:text="升级超级俱乐部"
+        android:textColor="@color/c333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

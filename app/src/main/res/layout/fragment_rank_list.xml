@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_club_dialog"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <com.jfkj.im.widget.CircleImageView
+                    android:id="@+id/iv_second_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_color="@color/color_a2a6b5"
+                    app:civ_border_width="1.5dp" />
+
+                <TextView
+                    android:id="@+id/tv_second_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="2"
+                    android:textColor="#FFA2A6B5" />
+
+                <TextView
+                    android:id="@+id/tv_second_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_ff000000"
+                    android:textSize="13sp"
+                    tools:text="第二名" />
+
+                <TextView
+                    android:id="@+id/tv_second_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/find_icon_gift_red"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/color_ff000000"
+                    android:textSize="14sp"
+                    tools:text="9820" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/layout_third"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.jfkj.im.widget.CircleImageView
+                    android:id="@+id/iv_third_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:civ_border_color="@color/color_e58c66"
+                    app:civ_border_width="1.5dp" />
+
+                <TextView
+                    android:id="@+id/tv_third_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="3"
+                    android:textColor="#FFA2A6B5" />
+
+                <TextView
+                    android:id="@+id/tv_third_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_ff000000"
+                    android:textSize="13sp"
+                    tools:text="李老八" />
+
+                <TextView
+                    android:id="@+id/tv_third_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/find_icon_gift_red"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/color_ff000000"
+                    android:textSize="14sp"
+                    tools:text="9820" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_first_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/find_bg_one_white"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_top"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_top"
+            app:layout_constraintRight_toRightOf="@+id/layout_top" />
+
+        <com.jfkj.im.widget.CircleImageView
+            android:id="@+id/iv_first_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            app:civ_border_color="@color/color_ffc528"
+            app:civ_border_width="1.5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_first_bg"
+            app:layout_constraintRight_toRightOf="@+id/iv_first_bg"
+            app:layout_constraintTop_toTopOf="@id/iv_first_bg"
+            tools:background="@drawable/add_user_iv" />
+
+        <TextView
+            android:id="@+id/tv_first_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1"
+            android:textColor="@color/color_ffc528"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_first_bg"
+            app:layout_constraintRight_toRightOf="@+id/iv_first_bg"
+            app:layout_constraintTop_toBottomOf="@+id/iv_first_icon" />
+
+        <TextView
+            android:id="@+id/tv_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_ff000000"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_first_bg"
+            app:layout_constraintRight_toRightOf="@+id/iv_first_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_rank"
+            tools:text="李老八" />
+
+        <TextView
+            android:id="@+id/tv_first_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/find_icon_gift_red"
+            android:drawablePadding="3dp"
+            android:textColor="@color/color_ff000000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@+id/iv_first_bg"
+            app:layout_constraintRight_toRightOf="@+id/iv_first_bg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_name"
+            tools:text="9820" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_radious10_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_top" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="没有内容哦"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+</RelativeLayout>

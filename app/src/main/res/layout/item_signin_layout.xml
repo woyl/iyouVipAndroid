@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/ActivityBackGround"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingTop="@dimen/album_dp_15"
+        android:paddingBottom="@dimen/album_dp_15"
+        android:layout_marginEnd="@dimen/album_dp_15"
+        android:layout_marginStart="@dimen/album_dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/tv_position"
+            android:src="@drawable/default_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/img_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="150dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            tools:text="Blackpink"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_vip_level"
+            android:layout_marginStart="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_name"
+            android:background="@mipmap/icon_mine_vip_brg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="VIP0"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            tools:ignore="SmallSp" />
+
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:drawablePadding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c767676"
+            android:text="参与成功"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_submit"
+            android:gravity="center"
+            android:background="@drawable/shape_sign_in_brg"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:text="确认到场"
+
+            android:textColor="@color/cFF2B66"
+            android:textSize="@dimen/font_12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_complaint"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/shape_sign_in_cheanl_brg"
+            android:gravity="center"
+            android:text="投诉"
+            android:textColor="@color/line_btn"
+            android:textSize="@dimen/font_12sp"
+            android:layout_toStartOf="@+id/tv_submit"
+            android:layout_width="60dp"
+            android:layout_height="25dp"/>
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_marginTop="@dimen/album_dp_15"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="@dimen/album_dp_15"
+        android:background="#E5E5E5FF"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+</LinearLayout>

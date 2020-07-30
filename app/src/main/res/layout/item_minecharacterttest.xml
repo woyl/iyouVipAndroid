@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="134dp"
+    android:layout_marginTop="19dp"
+    android:background="@drawable/item_minecharacterttest"
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/chatting_btn_character_nor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="我发布了性格测试"
+        android:textColor="@color/color_ff000000"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/iv"
+        app:layout_constraintTop_toTopOf="@id/iv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="2020-02-06 15:37"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv"
+        app:layout_constraintLeft_toRightOf="@id/iv" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="状态"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

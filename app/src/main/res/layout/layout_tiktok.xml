@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_play"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="149dp"
+        android:src="@mipmap/icon_camera"
+        android:layout_gravity="bottom|right"
+        tools:ignore="RtlHardcoded" />
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/video_progress"/>
+
+</FrameLayout>

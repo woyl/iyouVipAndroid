@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_head"
+    android:background="@mipmap/test_bg_nor"
+    tools:context="com.jfkj.im.TIM.redpack.chatroom.MyCharacterTextActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_title_back"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/icon_close_white"
+
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:text="我的性格测试"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_back"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/swipe_recycler"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/swipe_recycler"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:id="@+id/img_no_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@mipmap/mk_iiiustration"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_no_date"
+        android:textColor="@color/slide_bar_hint_color"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

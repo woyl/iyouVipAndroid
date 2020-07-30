@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:id="@+id/cl_layoud"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cir_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:ignore="MissingConstraints"
+            tools:background="@drawable/default_head_iv"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_name"
+            android:textSize="@dimen/font_12sp"
+            android:textColor="#ffbbbbbb"
+            tools:text="铁岭娜扎"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/cir_head"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="10dp"
+
+
+            android:textColor="#ff767676"
+            android:textSize="10sp"
+            tools:text="1分钟前"/>
+    </RelativeLayout>
+
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="40dp"
+        android:id="@+id/tv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        tools:text="龙哥还是你最牛逼，最能打"
+        />
+
+
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_dis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shap_discuss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_layout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+        tools:ignore="MissingConstraints,RtlSymmetry">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_dis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_view_more"
+            android:layout_marginEnd="10dp"
+            android:drawableEnd="@drawable/arrow_right"
+            android:text="查看更多"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="end"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

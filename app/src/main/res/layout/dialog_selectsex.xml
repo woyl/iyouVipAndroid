@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="40dp"
+
+    android:layout_marginRight="40dp"
+    android:background="@drawable/shape_dialog_selectsex">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="温馨提示"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="性别选择后将无法修改，是否确认?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_base_btn_f3f1f6_20dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_subtitle"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_base_btn_black_20dp"
+        android:layout_marginStart="15dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="10dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="10dp"
+        android:text="确认"
+        android:textColor="@color/color_ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toEndOf="@+id/tv_cancel"
+
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

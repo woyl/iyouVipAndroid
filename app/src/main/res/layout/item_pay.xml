@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:orientation="horizontal"
+    android:paddingLeft="30dp"
+    android:paddingTop="15dp"
+    android:id="@+id/ll_play"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/shape_item_pay" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="支付名字"
+        android:textColor="@color/color_ff000000"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/pop_radio_btn_unsel" />
+</LinearLayout>

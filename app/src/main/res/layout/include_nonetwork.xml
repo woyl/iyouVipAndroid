@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="166dp"
+        android:gravity="center"
+        android:text="网络错误"
+        android:textColor="@color/color_ff000000"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="请检查网络连接后重试"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp" />
+
+    <Button
+        style="@style/violet_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="83dp"
+        android:text="重试" />
+</LinearLayout>

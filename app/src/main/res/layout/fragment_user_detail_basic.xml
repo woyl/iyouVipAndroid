@@ -1,0 +1,112 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginLeft="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.jfkj.im.ui.fragment.UserDetailBasicFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_basic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="个性标签"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+        <!-- app:layout_constraintTop_toBottomOf="@+id/tv_describe"-->
+
+
+
+        <com.jfkj.im.view.flowlayout.TagFlowLayout
+            android:layout_marginTop="10dp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_basic_title"
+            android:id="@+id/flowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout_club"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingRight="15dp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/flowLayout">
+
+            <TextView
+                android:id="@+id/tv_club_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="俱乐部"
+                android:textColor="@color/color_ffffff"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:fadingEdge="none"
+                android:id="@+id/club_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_club_title"
+                android:layout_marginTop="10dp"
+                app:fastScrollEnabled="false" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/layout_club"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="破冰任务"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:overScrollMode="never"
+                android:fadingEdge="none"
+                android:id="@+id/rv_prush_ice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+
+                android:scrollbars="none"
+                tools:ignore="UnusedAttribute" />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

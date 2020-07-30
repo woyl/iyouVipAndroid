@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="选择日期"
+        android:textColor="@color/picture_color_grey"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp">
+
+        <com.jfkj.im.utils.datepicker.PickerView
+            android:id="@+id/dpv_year"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="2"/>
+
+
+        <com.jfkj.im.utils.datepicker.PickerView
+            android:id="@+id/dpv_month"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="2"/>
+
+
+        <com.jfkj.im.utils.datepicker.PickerView
+            android:id="@+id/dpv_day"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_weight="2"/>
+
+
+        <com.jfkj.im.utils.datepicker.PickerView
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="160dp"
+            android:layout_weight="2"/>
+
+        <com.jfkj.im.utils.datepicker.PickerView
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="160dp"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_marginLeft="30dp"
+
+            android:id="@+id/tv_cancel"
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@mipmap/icon_btn_white_brg"
+            android:text="取消"
+            android:textColor="#ff666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_marginRight="25dp"
+
+            android:id="@+id/tv_confirm"
+            android:layout_width="105dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="确认"
+            android:background="@mipmap/icon_btn_black_brg"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+
+            android:layout_marginLeft="25dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

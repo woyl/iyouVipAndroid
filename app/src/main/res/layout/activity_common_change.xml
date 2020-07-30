@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ClubnameActivity">
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:src="@mipmap/iv_back_black"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="修改手机号"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_nickname_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="26dp"
+        android:text="填写昵称（15字以内）"
+        android:alpha="0.5"
+        android:textColor="@color/color_ff000000"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layout_input"
+        style="@style/style_club_tv"
+        android:layout_marginTop="40dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入昵称"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:textSize="15sp"
+            android:textColorHint="@color/c767676"
+            android:textColor="@color/white"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/iv_clear_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/fix_person_nick_name"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_input_content"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:padding="15dp"
+        android:background="@drawable/shape_club_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_input_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请填写个人描述"
+            android:textSize="15sp"
+            android:textColorHint="@color/c767676"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_text_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0/50"
+            android:textSize="12sp"
+            android:textColor="@color/c767676"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:padding="15dp"
+        android:background="@drawable/shape_club_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edit_input_school"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请填写您的院校名称"
+            android:textSize="15sp"
+            android:textColorHint="@color/c767676"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_text_num2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0/15"
+            android:textSize="12sp"
+            android:textColor="#FFBFBBC9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/violet_tv"
+        android:layout_marginTop="40dp"
+        android:alpha="0.3"
+        android:textColor="@color/black"
+        android:background="@drawable/shap_bt_two_bg"
+        android:text="完成"
+        app:layout_constraintTop_toBottomOf="@id/layout_input"
+        tools:ignore="MissingConstraints"/>
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginBottom="35dp"
+    android:orientation="vertical"
+
+    android:paddingLeft="15dp">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        android:layout_width="65dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="65dp">
+
+
+        <View
+            android:background="@mipmap/icon_touxiang_bk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </View>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            tools:background="@drawable/default_head"
+
+            android:id="@+id/iv_user_head"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:scaleType="fitStart"
+        android:layout_marginTop="80dp"
+        android:id="@+id/iv_has_video"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/iv_user_has_video"
+        android:background="@drawable/shape_user_detail_play_video"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+       />
+
+    <LinearLayout
+        android:id="@+id/layout_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_online_green"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+
+        android:layout_marginTop="28dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="13dp"
+            android:src="@drawable/shape_circle" />
+
+        <TextView
+            android:id="@+id/tv_last_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="4dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/color_ffffff"
+            tools:text="49sss分钟前" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rl_layout"
+        app:layout_constraintLeft_toRightOf="@+id/rl_layout"
+        app:layout_constraintTop_toTopOf="@+id/rl_layout">
+
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:singleLine="true"
+                android:textColor="@color/color_ffffff"
+                android:textSize="18sp"
+                tools:text="blackpinck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="11dp"
+                android:background="@mipmap/icon_mine_vip_brg"
+                android:gravity="center"
+
+                android:textColor="@color/color_ffffff"
+                android:textSize="10sp"
+
+                tools:text=" " />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_user_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_user_self_info"
+
+            tools:background="@mipmap/icon_female" />
+
+        <TextView
+
+            android:id="@+id/tv_user_self_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:alpha="0.6"
+            android:textColor="#ffbbbbbb"
+            android:textSize="12sp"
+            tools:text="22岁 上海市 处女座" />
+
+    </RelativeLayout>
+
+    <TextView
+
+        android:id="@+id/tv_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_user_detail_tv_4dp"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="暂未添加个人描述..."
+        android:textColor="#ff767676"
+        android:textSize="@dimen/font_12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_layout" />
+ 
+
+</androidx.constraintlayout.widget.ConstraintLayout>

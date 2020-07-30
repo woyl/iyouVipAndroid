@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.jfkj.im.TIM.component.TitleBarLayout
+        android:id="@+id/group_info_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_title_height" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_member_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:name="@string/group_members" />
+
+<!--            <com.jfkj.im.TIM.component.GridViewInScrollView-->
+<!--                android:id="@+id/group_members"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:numColumns="5" />-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp" />
+
+
+            <TextView
+                android:id="@+id/tv_look_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/look_more_club_member"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:drawablePadding="5dp"
+                android:drawableEnd="@mipmap/list_icon_more_gray_l_more"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/c767676"
+                android:layout_gravity="center"/>
+
+            
+            <View
+                android:background="#0Dffffff"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_type_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:name="@string/group_type" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/page_margin"
+                app:name="@string/group_id" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/page_margin"
+                app:name="@string/group_info" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="@string/group_jlb_name" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/page_margin"
+                app:name="@string/group_icon" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="@string/group_notice_jlb" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/join_type_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:name="@string/join_group_type" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_jlb_day_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="@string/group_jlb_day_gift" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_jlb_gift_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="@string/group_jlb_gift_date" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_jlb_super_club"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:name="@string/group_jlb_super_club" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_hide_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:isSwitch="true"
+                app:name="@string/group_hide_club_member" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/group_message_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isSwitch="true"
+                app:name="@string/group_message_no" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/self_nickname_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:name="@string/in_group_nick_name" />
+
+            <com.jfkj.im.TIM.component.LineControllerView
+                android:id="@+id/chat_to_top_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:name="@string/chat_to_top"
+                app:isSwitch="true"/>
+
+            <Button
+                android:id="@+id/group_dissolve_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/page_margin"
+                android:layout_marginRight="@dimen/page_margin"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shap_bt_two_bg"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

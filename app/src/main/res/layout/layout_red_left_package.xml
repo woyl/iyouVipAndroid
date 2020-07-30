@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210dp"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/fl_read_pack"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:background="@mipmap/read_pack_head_left">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/chatting_icon_money_red"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="恭喜发财，大吉大利"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                tools:text="已领取"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/read_package_foot"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="20dp"
+        android:textSize="10sp"
+        android:textColor="@color/cFF0D52"
+        tools:text="俱乐部红包"
+        tools:ignore="RtlSymmetry,SmallSp" />
+</LinearLayout>

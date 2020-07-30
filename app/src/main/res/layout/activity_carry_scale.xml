@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jfkj.im.ui.mine.CarryScaleActivity">
+
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/include_base_back_title" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#0dffffff">
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true">
+           <TextView
+               android:id="@+id/tv_scale"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="0"
+               android:textColor="@color/white"
+               android:textSize="35sp" />
+
+           <ImageView
+               android:id="@+id/iv_show_dialog"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/icon_question_gray_nor" />
+       </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="#fff8f6fa" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_male"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
+            android:text="成功邀请1位男性付费用户，用户首充108元 提现比例+20%（有效期3天），首充518元 +20%（有效期20天）。"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_male"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_shape_add_video"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@color/color_e5e5e5" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_personal_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
+            android:text="上传个人视频且审核通过，提现比例增加 1%（有效期1天），仅限1次。"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_personal_video"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_shape_add_video"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@color/color_e5e5e5" />
+
+    <RelativeLayout
+        android:id="@+id/rl_female"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
+            android:text="邀请1位女生加入I you，提现比例+10% （有效期10天）。"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_female"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_shape_add_video"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@color/color_e5e5e5" />
+
+    <RelativeLayout
+        android:id="@+id/rl_comment_dynamics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
+            android:text="在I you圈给其他用户评论，每次+0.1%，最多+1%（有效期1天）。"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_comment_dynamics"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_shape_add_video"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@color/color_e5e5e5" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sharedynamics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="15dp"
+            android:text="在I you圈上分享图片或视频，+1%（有效期1天）。"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_sharedynamics"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mine_shape_add_video"
+            android:gravity="center"
+            android:text="去完成"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        android:background="@color/color_e5e5e5" />
+
+</LinearLayout>

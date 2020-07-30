@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jfkj.im.ui.party.PartyAddressActivity">
+    <com.jfkj.im.widget.StatusBarHeightView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_padding_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="9dp"
+            android:drawableEnd="@mipmap/nav_icon_back_black"
+            tools:text="深圳"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:src="@mipmap/iv_back_black" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c1d1d1d"/>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:orientation="horizontal"
+        android:background="@drawable/shap_search_bg"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingStart="20dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        tools:ignore="RtlSymmetry">
+
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/nav_icon_search_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:maxLines="1"
+            android:id="@+id/ed_serch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:layout_marginEnd="15dp"
+            android:textColorHint="@color/c767676"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:hint="输入场所搜索"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginEnd="15dp"
+            android:background="@mipmap/search_del"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_popular"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门搜索"
+        android:drawablePadding="4dp"
+        android:drawableStart="@mipmap/hot"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        />
+
+    <com.jfkj.im.view.flowlayout.TagFlowLayout
+
+        android:id="@+id/flowLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+
+        />
+
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

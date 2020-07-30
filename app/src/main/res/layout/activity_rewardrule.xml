@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RewardruleActivity"
+    tools:ignore="MissingConstraints">
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:use_type="use_padding_top" />
+
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_title"
+        app:layout_constraintTop_toBottomOf="@id/status" />
+
+    <View
+
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c1d1d1d"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_rule1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingStart="20dp"
+            android:text="一、"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="奖励规则"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <View
+                android:layout_width="68dp"
+                android:layout_height="5dp"
+                android:background="@drawable/shap_bt_bg" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="1.您作为邀请人，如您邀请的男性用户成功充值或女性用户收到礼物时，您会获得8%额度的钻石奖励。"
+        android:textColor="@color/line_btn"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_rule1" />
+
+    <TextView
+        android:id="@+id/tv_detail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="2.您邀请的人邀请了其他用户，男性用户成功充值或女性用户收到礼物时，您会获得2%的钻石奖励。"
+        android:textColor="@color/line_btn"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_rule2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingStart="20dp"
+            android:text="二、"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="注意事项"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintTop_toBottomOf="@id/view" />
+
+            <View
+                android:layout_width="68dp"
+                android:layout_height="5dp"
+                android:background="@drawable/shap_bt_bg" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="1.若同一用户被多人或多次邀请，则奖励只发放于最先成功邀请的人。"
+        android:textColor="@color/line_btn"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_rule2" />
+
+    <TextView
+        android:id="@+id/tv_detail4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="2.已使用过的同一手机号码、手机终端等与用户身份相关的信息，符合其中任意一项，均视为同一用户。"
+        android:textColor="@color/line_btn"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="3.在参与活动过程中，如果用户出现违规行为（包括但不限于洗钱、作弊、骗取他人证件注册等），平台有权取消您的活动参与资格并回收您所获得的奖励。"
+        android:textColor="@color/line_btn"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail4" />
+</LinearLayout>

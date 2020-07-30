@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingStart="15dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:text="字母"
+        android:background="#181818"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/recyc_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:layout_marginStart="100dp"
+        android:background="#F8F6FA"/>
+</LinearLayout>

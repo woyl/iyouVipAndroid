@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lin.cardlib.SwipeTouchLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:background="@drawable/shape_bg_fiv"
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jfkj.im.view.RoundImageView
+            android:background="@color/c111111"
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+           />
+        <ImageView
+            android:id="@+id/iv_dislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="35dp"
+            android:alpha="0"
+            android:src="@mipmap/video_btn_cancel_red" />
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:alpha="0"
+            android:src="@mipmap/video_btn_complete_red" />
+        <LinearLayout
+            android:paddingTop="12dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_bg_btm"
+            android:paddingStart="15dp"
+
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:maxLength="13"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textSize="13sp"
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"
+                    android:background="@mipmap/icon_mine_vip_brg"
+                    android:text="V5"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawablePadding="@dimen/album_dp_2"
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:drawableRight="@mipmap/icon_female"
+                    android:text="23岁"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="上海市"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_xz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:text="处女座"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</com.lin.cardlib.SwipeTouchLayout>

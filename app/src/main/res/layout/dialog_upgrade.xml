@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:background="#00000000">
+
+
+
+
+    
+    <RelativeLayout
+
+        android:background="@drawable/icon_upgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_marginTop="38dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="升级啦"
+            android:textColor="#ff9a632f"
+            android:textSize="24sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_current_level"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前等级VIP3"
+            android:textColor="#ffda8c42"
+            android:textSize="16sp"
+            />
+
+
+        <TextView
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/shape_dialog_upgrade_grg"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_current_level"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="创建俱乐部功能已解锁"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <ImageView
+        android:src="@drawable/btn_close_white_nor"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</LinearLayout>

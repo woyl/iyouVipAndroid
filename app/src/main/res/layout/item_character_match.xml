@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:paddingStart="60dp"
+    android:paddingEnd="60dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        tools:text="1.刚整理好包，就出现了一个星光闪烁的时空黑洞，你希望它把你带去哪里？"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:paddingLeft="30dp"
+        android:gravity="center_vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:text="我的征途是星辰大海"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_item_fragment_btn_brg2"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_no_answer"
+        android:paddingLeft="30dp"
+        android:gravity="center_vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:text="我的征途是星辰大海"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_item_fragment_btn_brg2"/>
+
+</LinearLayout>

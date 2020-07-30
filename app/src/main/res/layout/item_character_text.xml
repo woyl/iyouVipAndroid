@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="60dp"
+
+    android:paddingEnd="60dp"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_character_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center"
+            android:background="@mipmap/icon_characte_number"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/13"
+            android:textSize="@dimen/font_12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="刚整理好背包，就出现了一个星光闪烁的时空黑洞，你希望它把你带去哪里？"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_answer"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

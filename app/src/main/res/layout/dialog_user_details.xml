@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/shap_bt_semi_cicle_whitebg"
+    android:orientation="vertical"
+    android:layout_height="254dp">
+
+
+
+
+    <TextView
+        android:id="@+id/tv_name"
+
+        android:paddingTop="22dp"
+        android:paddingBottom="27dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取一个名字"
+        android:textColor="#ff333333"
+        android:textSize="18sp"
+        />
+
+
+
+    <View
+        android:background="#0D000000"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_jubao"
+        android:paddingBottom="19dp"
+        android:paddingTop="19dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="举报"
+        android:textColor="#fff84948"
+        android:textSize="13sp"
+        />
+
+    <View
+        android:background="#0D000000"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_lahei"
+        android:paddingBottom="19dp"
+        android:paddingTop="19dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拉黑"
+        android:textColor="#fff84948"
+        android:textSize="13sp"
+        />
+
+    <View
+        android:background="#08000000"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_close"
+
+        android:paddingBottom="19dp"
+        android:paddingTop="19dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        />
+
+
+</LinearLayout>

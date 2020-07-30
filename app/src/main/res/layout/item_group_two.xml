@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/c111111"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:text="排名"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"/>
+
+    <FrameLayout
+        android:id="@+id/fl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_sort"
+        tools:ignore="MissingConstraints">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_circleimageview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/default_head_iv"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/img_is_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone"
+            android:background="@mipmap/club_icon_super_red"/>
+
+    </FrameLayout>
+
+
+    <TextView
+
+        android:id="@+id/tv_group_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="群名字"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintRight_toLeftOf="@+id/tv_total_gift"
+        app:layout_constraintLeft_toRightOf="@id/fl_head"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:textColor="#ff767676"
+        android:id="@+id/tv_group_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="每日礼物"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/fl_head"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_name"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_total_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:drawableLeft="@mipmap/icon_diamond_yellow"
+        android:text="*0/人"
+        android:textSize="13sp"
+        android:textColor="@color/color_ff4d6c"
+        app:layout_constraintLeft_toRightOf="@+id/tv_group_gift"
+        app:layout_constraintTop_toTopOf="@+id/tv_group_gift"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:text="0"
+        android:textSize="13sp"
+        android:drawableRight="@mipmap/icon_diamond_yellow"
+        android:textColor="@color/color_ff4d6c"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_people"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:textColor="#ff767676"
+        android:id="@+id/tv_total_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:text="累计送出礼物"
+        android:textSize="13sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

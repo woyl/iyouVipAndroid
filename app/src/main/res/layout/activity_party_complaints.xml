@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jfkj.im.ui.party.PartyComplaintsActivity">
+
+    <include layout="@layout/include_title_finsih"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp">
+        <View
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:background="@drawable/shap_shu_line_bg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="投诉"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+    <CheckBox
+        android:textSize="13sp"
+        android:id="@+id/info_1"
+        style="@style/CheckBox_Report"
+        android:layout_marginTop="20dp"
+        android:text="未能准时参加见面聚会" />
+
+    <CheckBox
+        android:textSize="13sp"
+        android:id="@+id/info_2"
+        style="@style/CheckBox_Report"
+        android:text="未参加见面聚会" />
+
+
+
+
+
+    <TextView
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="27dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片证据(必填）"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp" />
+
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:alpha="0.5"
+        android:background="@drawable/shap_bt_two_bg"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="确认"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="228dp"
+        android:layout_height="17dp"
+        android:visibility="gone"
+        android:text="提交投诉后我们会在一个工作日内完成审核"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        />
+
+
+
+
+
+</LinearLayout>

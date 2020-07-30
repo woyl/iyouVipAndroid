@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/c111111"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_head">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="26dp"
+        android:text="输入俱乐部公告"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+
+        android:textColorHint="#80767676"
+        android:background="@drawable/shape_base_btn_white_3dp"
+        android:id="@+id/club_et"
+        style="@style/style_club_et"
+        android:layout_height="180dp"
+        android:layout_marginTop="25dp"
+        android:gravity="start"
+        android:hint="请输入俱乐部公告"
+        android:maxLength="50"
+        android:paddingLeft="20dp"
+        android:paddingTop="14dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="14dp"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/notice_tv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:textColor="#767676"
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="0/50"
+        app:layout_constraintBottom_toBottomOf="@+id/club_et"
+        app:layout_constraintRight_toRightOf="@id/club_et"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_height="45dp"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:textColor="@color/color_333333"
+        android:alpha="0.3"
+        android:id="@+id/next_tv"
+        style="@style/violet_tv"
+        android:layout_marginTop="50dp"
+        android:text="下一步"
+        app:layout_constraintTop_toBottomOf="@id/club_et"
+        tools:ignore="MissingConstraints"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

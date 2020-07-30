@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/shape_dialog"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="温馨提示"
+            android:textColor="@color/color_ff000000"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <androidx.core.widget.NestedScrollView
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:id="@+id/nested_scorollview"
+            android:layout_width="match_parent"
+            android:layout_height="178dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="19dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="欢迎开启I you!"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+
+                    android:id="@+id/tv_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:singleLine="true"
+                    android:text="我们依据最新的法律法规、监管要求更新了"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_one"
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+                    android:id="@+id/tv_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="I you"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_one"
+                    app:layout_constraintTop_toBottomOf="@id/tv_two"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_user_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="《用户协议》"
+                    android:textColor="#FF2B66"
+                    android:textSize="12sp"
+
+                    app:layout_constraintLeft_toRightOf="@id/tv_six"
+                    app:layout_constraintTop_toBottomOf="@id/tv_two"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="和"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_user_agreement"
+                    app:layout_constraintTop_toBottomOf="@id/tv_two"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:text="《隐私政策》"
+                    android:textColor="#FF2B66"
+                    android:textSize="@dimen/font_12sp"
+
+                    app:layout_constraintLeft_toRightOf="@+id/tv_three"
+                    app:layout_constraintTop_toBottomOf="@id/tv_two" />
+
+                <TextView
+                    android:id="@+id/tv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text=",特向您提示:"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_privacy_policy"
+                    app:layout_constraintTop_toBottomOf="@id/tv_two"
+                    tools:ignore="MissingConstraints" />
+
+
+                <TextView
+
+                    android:id="@+id/tv_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/c333333"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@+id/tv_one"
+                    app:layout_constraintTop_toBottomOf="@id/tv_four"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/shape_base_btn_black_20dp"
+            android:text="同意"
+            android:textColor="@color/color_ffffff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nested_scorollview"
+           />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="34dp"
+        android:src="@mipmap/dialog_close_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

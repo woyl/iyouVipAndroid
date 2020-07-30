@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_base_back_title" />
+
+
+
+    <View
+        android:background="@color/color_333333"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="网络错误"
+            android:textColor="#ff000000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            android:text="请检查网络连接后重试"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_chong"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="82dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="82dp"
+            android:background="@drawable/shape_bg_ten_black_mini"
+            android:gravity="center"
+            android:text="重试"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/c111111"
+        android:id="@+id/layout_gift"
+        style="@style/SettingLayout"
+        android:layout_height="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计获得礼物："
+            android:textColor="@color/line_btn"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/icon_coin_yellow"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLength="11"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            tools:text="134" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/iv_go_detail" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_e5e5e5" />
+
+
+    <LinearLayout
+        android:background="@color/c111111"
+        android:id="@+id/ll_gift"
+        style="@style/SettingLayout"
+        android:layout_height="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计结算："
+            android:textColor="@color/line_btn"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_jsmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥0"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_e5e5e5" />
+
+
+</LinearLayout>

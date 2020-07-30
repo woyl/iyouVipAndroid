@@ -1,0 +1,2 @@
+include ':app', ':videocache', ':videoplayer', ':picturechoose', ':wheelview', ':ucrop', ':picture_library', ':imageviewer', ':pickerview', ':photoviewers'
+

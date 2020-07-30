@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F6FA"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="9dp"
+        android:text="字母"
+        android:textColor="@color/color_ff000000"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ly_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+
+        <TextView
+
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="地区"
+            android:textColor="@color/color_ff000000"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="+"
+            android:textColor="@color/color_ff000000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:text="区号"
+            android:textColor="@color/color_ff000000"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F8F6FA" />
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.RecordvideoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/record_layout"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true">
+
+            <com.jfkj.im.view.RecordVideoView
+                android:id="@+id/record_video_btn_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@id/record_video_btn_record"
+                android:layout_toStartOf="@id/record_video_btn_record"
+                 android:id="@+id/onClose"
+                android:scaleType="center"
+                android:visibility="invisible"
+                android:src="@mipmap/ic_camera_finish"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@id/record_video_btn_record"
+                android:layout_toRightOf="@id/record_video_btn_record"
+                android:id="@+id/onSwitch"
+                android:visibility="invisible"
+                android:scaleType="center"
+                android:src="@mipmap/ic_camera_switch"/>
+        </RelativeLayout>
+
+        <com.jfkj.im.view.SendView
+            android:id="@+id/record_SendView"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/shape_bg_tm"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:alpha="0.5"
+        android:background="@color/color_ff000000"
+        tools:ignore="MissingConstraints" />
+
+<!--    <include-->
+<!--        android:id="@+id/include_title"-->
+<!--        layout="@layout/include_title" />-->
+
+
+
+    <RelativeLayout
+
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        
+        
+        <com.jfkj.im.widget.StatusBarHeightView
+            android:id="@+id/save_image_matrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+
+    <ImageView
+        android:layout_below="@+id/save_image_matrix"
+        android:src="@drawable/back_iv"
+        android:id="@+id/title_left_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/color_ffffff"
+        android:textSize="15sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_below="@+id/save_image_matrix"
+        android:text="请在录制中读出以下数字"
+        android:id="@+id/title_center_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_ffffff"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+       />
+
+    <TextView
+        android:id="@+id/title_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_ffffff"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0614"
+        android:textColor="@color/color_ffffff"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_head"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

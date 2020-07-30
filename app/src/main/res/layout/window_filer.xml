@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ViewFlipper
+        android:id="@+id/notice_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/shape_squre_home"
+        android:maxWidth="200dp"
+        android:autoStart="true"
+        android:flipInterval="3000"
+        android:inAnimation="@anim/anim_up_stack_in"
+        android:outAnimation="@anim/anim_up_stack_out"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

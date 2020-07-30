@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shap_ten_et_bg">
+    <TextView
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拒绝理由"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+
+        android:textColorHint="#ffcccccc"
+        android:textColor="#000000"
+        android:maxLength="50"
+        android:id="@+id/et_refuse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:hint="请输入拒绝理由"
+        android:background="@null"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/color_e5e5e5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/tv_refuse"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="跳过"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="13sp"
+            android:background="@drawable/shape_base_btn_f3f1f6_20dp"/>
+        <TextView
+
+            android:id="@+id/tv_send"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_base_btn_black_20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:enabled="false"
+            android:layout_marginStart="15dp"
+            android:alpha="0.5"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:text="发送"/>
+    </LinearLayout>
+
+</LinearLayout>

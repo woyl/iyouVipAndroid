@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:background="@drawable/shape_club_dialog"
+    android:orientation="vertical"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:id="@+id/layout_male"
+        style="@style/DialogFilterText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_male"
+            android:drawablePadding="5dp"
+            android:text="只看男生" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_female"
+        style="@style/DialogFilterText"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_female"
+            android:drawablePadding="5dp"
+            android:text="只看女生" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_all"
+        style="@style/DialogFilterText"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_sex_all"
+            android:drawablePadding="5dp"
+            android:text="男女不限" />
+    </LinearLayout>
+
+
+</LinearLayout>

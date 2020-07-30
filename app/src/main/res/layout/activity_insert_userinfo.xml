@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.jfkj.im.ui.mine.InsertUserinfoActivity">
+
+    <com.jfkj.im.widget.StatusBarHeightView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:use_type="use_padding_top" />
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜您通过认证！"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+
+
+
+    <TextView
+
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="完善的个人资料会极大的提升别人对您的好感，增加您的吸引力"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:text="详细信息"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_desc"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人描述"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_user_desc"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未填写"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_height"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身高"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_weight"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体重"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_home"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家乡"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_hometown"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_education"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学历"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_education"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_school"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="院校"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_school"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未填写"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_industry"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="行业"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_industry"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_post"
+        style="@style/SettingLayout"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="职业"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_post"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxLength="10"
+            style="@style/InfoMessage"
+            android:layout_weight="1"
+            android:gravity="end|center"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="64dp"
+        android:layout_height="23dp"
+        android:text="生活习惯"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_smoking"
+        style="@style/SettingLayout">
+
+        <TextView
+            style="@style/SettingInfoText"
+            android:text="抽烟习惯"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_smoing"
+            style="@style/InfoMessage"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_wine"
+        style="@style/SettingLayout">
+
+        <TextView
+            style="@style/SettingInfoText"
+            android:text="饮酒习惯"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_wine"
+            style="@style/InfoMessage"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_cuisine"
+        style="@style/SettingLayout">
+
+        <TextView
+            style="@style/SettingInfoText"
+            android:text="喜欢菜系"
+            android:textColor="#BBBBBB" />
+
+        <TextView
+            android:id="@+id/tv_like_cuisine"
+            style="@style/InfoMessage"
+            android:text="未选择"
+            android:textColor="@color/color_ff4d6c" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icon_list_inser_icon_more_gray" />
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="完成"
+        android:textColor="@color/c333333"
+        android:textSize="16sp"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.activity.ClubmessageActivity">
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/default_head_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="群主昵称"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/head_iv"
+        app:layout_constraintTop_toBottomOf="@id/include_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/color_666666"
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:text="城市"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/head_iv"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/shape_orange_btn"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingTop="1dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="1dp"
+        android:text="v5"
+        android:textColor="@color/color_ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@mipmap/icon_diamond_yellow"
+        android:text="数量"
+        android:textColor="@color/color_ff4d6c"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="@color/color_666666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:text="每日礼物"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_city"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/head_iv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textSize="13sp"
+        android:id="@+id/tv_group_announcement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="俱乐部公告"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:textColor="#ff767676"
+        android:textSize="12sp"
+        android:id="@+id/tv_group_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="公告内容"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_announcement"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_message"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/rl_diamond_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="16dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计送出礼物"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:id="@+id/gif_tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/icon_diamond_yellow"
+            android:text="数量"
+            android:textColor="@color/color_ff4d6c"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#ff181818"
+        app:layout_constraintTop_toBottomOf="@id/rl_diamond_number"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="俱乐部成员"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        tools:ignore="MissingConstraints" />
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/swiperecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vip"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:textColor="@color/color_333333"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:id="@+id/tv_add"
+        style="@style/violet_tv"
+        android:text="类型"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/swiperecyclerview"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

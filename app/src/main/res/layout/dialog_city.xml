@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_type_shopselect">
+
+    <ImageView
+        android:id="@+id/dialog_close_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@mipmap/dialog_close_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/dialog_select_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="请选择"
+        android:textColor="@color/color_ff000000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/province_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="省份/地区"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_select_tv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/city_ty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:text="城市"
+        app:layout_constraintBottom_toBottomOf="@+id/province_tv"
+        app:layout_constraintLeft_toLeftOf="@+id/province_tv"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@+id/province_tv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/select_province_view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="省份/地区"
+        app:layout_constraintLeft_toLeftOf="@+id/province_tv"
+        app:layout_constraintRight_toRightOf="@id/province_tv"
+        app:layout_constraintTop_toBottomOf="@+id/province_tv"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:text="城市"
+        app:layout_constraintLeft_toLeftOf="@+id/city_ty"
+        app:layout_constraintRight_toRightOf="@id/city_ty"
+        app:layout_constraintTop_toBottomOf="@+id/city_ty"
+        tools:ignore="MissingConstraints" />
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        app:layout_constraintTop_toBottomOf="@+id/select_province_view"
+        android:layout_width="match_parent"
+         android:id="@+id/swiperecyclerview"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

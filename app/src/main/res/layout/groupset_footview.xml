@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view2"
+        android:background="#0DFFFFFF"
+        android:layout_height="10dp"
+        android:layout_width="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/group_messaeg_ry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="俱乐部信息" />
+
+        <TextView
+            android:id="@+id/group_title_tv"
+            style="@style/group_title"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="13dp"
+            android:text="俱乐部信息"
+            android:drawableRight="@mipmap/list_icon_more_gray"
+            android:textColor="#767676" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/group_name_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="俱乐部名称" />
+
+        <TextView
+            android:drawableRight="@mipmap/list_icon_more_gray"
+            android:textColor="#767676"
+            android:id="@+id/tv_group_name"
+            style="@style/group_title"
+            android:layout_alignParentRight="true"
+
+            android:drawablePadding="13dp"
+            android:text="俱乐部名称"
+           />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/group_notice_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="俱乐部公告" />
+
+        <TextView
+            android:drawableRight="@mipmap/list_icon_more_gray"
+            android:textColor="#767676"
+            android:id="@+id/group_notice_tv"
+            style="@style/group_title"
+            android:layout_alignParentRight="true"
+
+            android:drawablePadding="13dp"
+            android:text="俱乐部公告"  />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/number_gift_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="每日礼物数量" />
+
+        <TextView
+
+            android:textColor="#767676"
+            android:id="@+id/tv_number_gif"
+            style="@style/group_title"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/icon_diamond_yellow"
+            android:gravity="center_vertical"
+            android:paddingRight="45dp"
+            android:text="每日礼物数量"
+   />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:background="@mipmap/list_icon_more_gray" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/gift_time_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="礼物发放时间" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#767676"
+            android:id="@+id/tv_time"
+            style="@style/group_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:text="时间"
+          />
+
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/list_icon_more_gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/group_super_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:text="超级俱乐部" />
+
+        <TextView
+            style="@style/group_title"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/list_icon_more_gray"
+            android:drawablePadding="13dp"
+            android:textColor="@color/color_999999" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="18dp"
+        android:paddingRight="17dp"
+        android:paddingBottom="18dp">
+
+        <TextView
+            style="@style/group_title"
+            android:layout_centerVertical="true"
+            android:text="消息免打扰" />
+
+        <ImageView
+            android:id="@+id/switch_open_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/switch_off_white" />
+    </RelativeLayout>
+
+
+    <TextView
+
+        android:textColor="@color/color_333333"
+        android:background="@drawable/shape_base_btn_white_20dp"
+        android:id="@+id/tv_exit"
+        style="@style/btn_red"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="解散俱乐部" />
+</LinearLayout>

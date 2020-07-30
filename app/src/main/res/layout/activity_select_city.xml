@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.jfkj.im.ui.party.SelectCityActivity">
+
+    <include layout="@layout/include_base_back_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/c1d1d1d"/>
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/shap_search_bg"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingStart="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/nav_icon_search_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/ed_serch_city"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textSize="13sp"
+            android:textColorHint="@color/c767676"
+            android:textColor="@color/white"
+            android:hint="输入场所搜索"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_continent"
+            android:layout_width="28dp"
+            android:layout_height="20dp"
+            android:text="国内"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_overseas"
+            android:layout_marginLeft="30dp"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:text="港澳台及国际"
+            android:textColor="@color/color_ff333333"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listview_all_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/tv_letter_overlay"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/cp_overlay_bg"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.jfkj.im.view.SideLetterBar
+        android:id="@+id/side_letter_bar"
+        android:layout_width="36dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        tools:ignore="RtlHardcoded" />
+
+
+
+</RelativeLayout>
+
+
+</LinearLayout>
+
+

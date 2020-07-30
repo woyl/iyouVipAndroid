@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/tv_sort"
+        android:layout_width="23dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        android:background="@drawable/default_head_iv"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head_circleimageview"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/tv_sort"
+        android:background="@drawable/default_head_iv" />
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/head_circleimageview"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/head_circleimageview"
+        android:text="群名字"
+        android:textColor="@color/color_ff000000"
+        android:textSize="13sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_group_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/head_circleimageview"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/head_circleimageview"
+        android:text="每日礼物"
+        android:textSize="@dimen/font_12sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_total_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_group_gift"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv_group_gift"
+        android:drawableLeft="@mipmap/icon_diamond_yellow"
+        android:text="*0/人"
+        android:textColor="@color/color_ff4d6c"
+        android:textSize="13sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_total_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="累计送出礼物"
+        android:textSize="@dimen/font_12sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_group_gift"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:drawableRight="@mipmap/icon_diamond_yellow"
+        android:text="0"
+        android:textColor="@color/color_ff4d6c"
+        android:textSize="13sp"></TextView>
+
+
+</RelativeLayout>

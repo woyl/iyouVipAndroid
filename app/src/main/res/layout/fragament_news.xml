@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="40dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/ActivityWhiteTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="发现"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+
+                android:id="@+id/layout_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+
+
+
+
+
+                <TextView
+                    android:drawableLeft="@mipmap/icon_fx_iyouq"
+                    android:drawablePadding="14dp"
+                    style="@style/ActivityWhiteTextColor"
+                    android:id="@+id/tv_circle"
+                    android:layout_centerVertical="true"
+
+                    android:layout_height="wrap_content"
+                    android:text="I you圈"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content" />
+
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_circle"
+                    android:id="@+id/tv_msg_number"
+                    android:layout_width="25dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/shape_circle_red"
+                    android:text="0"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="9sp"
+                    />
+
+
+
+
+
+
+
+                <RelativeLayout
+
+                    android:layout_alignParentRight="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+
+                    android:layout_below="@+id/tv_circle"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/iv_user_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+
+
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/iv_red_icon"
+                        android:layout_width="4.5dp"
+                        android:layout_height="4.5dp"
+                        android:layout_toRightOf="@+id/btn_find"
+                        android:background="@drawable/shape_red_text_bg"
+                        android:paddingLeft="3dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingBottom="3dp"
+                        />
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+                <ImageView
+
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="12.5dp"
+
+                    android:layout_below="@+id/tv_circle"
+                    android:src="@mipmap/icon_right_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:orientation="vertical"
+
+                android:layout_marginTop="5dp"
+
+
+                android:id="@+id/layout_crush_ice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                >
+
+
+                <TextView
+                    android:drawableLeft="@mipmap/icon_fx_pbrw"
+                    android:drawablePadding="14dp"
+                    android:layout_centerVertical="true"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ActivityWhiteTextColor"
+                    android:text="破冰任务"
+                    android:textSize="14sp"
+                   />
+
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_right_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/layout_party"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+               >
+
+
+
+                <TextView
+                    android:drawableLeft="@mipmap/icon_fx_jmjh"
+                    android:drawablePadding="14dp"
+                    style="@style/ActivityWhiteTextColor"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="见面聚会"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_new"
+                    android:layout_width="30dp"
+                    android:layout_height="13dp"
+                    android:textSize="9sp"
+                    android:text="NEW"
+                    android:textColor="@color/white"
+                    android:background="@drawable/shape_circle_red"
+                    tools:ignore="MissingConstraints,SmallSp" />
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_right_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rl_ad"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+          >
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:id="@+id/iv_advertisement"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:scaleType="fitXY" />
+
+
+
+            <TextView
+                android:id="@+id/tv_gg_title"
+                android:background="#66000000"
+                android:paddingRight="17dp"
+                android:paddingLeft="17dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:text="广告位 # 今夜喝不醉 #"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"/>
+
+
+
+        </RelativeLayout>
+        <!--广告-->
+
+
+
+
+
+        <TextView
+            android:drawablePadding="5dp"
+            android:drawableLeft="@mipmap/icon_faxian_paihang"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排行榜"
+            style="@style/ActivityDefaultWhiteTextColor"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+
+                android:id="@+id/fl_meili"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1">
+
+
+
+                <ImageView
+
+                    android:id="@+id/fl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+
+
+
+                <FrameLayout
+                    android:background="@drawable/shape_discover_fragment_man"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:maxWidth="200dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="23.5dp"
+                    tools:text="名字"
+                    style="@style/ActivityWhiteTextColor"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_number1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:drawableStart="@drawable/find_icon_gift_red"
+                    android:drawablePadding="2dp"
+                    tools:text="0"
+                    style="@style/ActivityWhiteTextColor"
+                    android:textSize="10sp" />
+
+
+                <FrameLayout
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_width="70dp"
+                    android:layout_height="43dp">
+
+                    <TextView
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/shape_faxian_paihang"
+                        android:gravity="center"
+                        android:layout_width="70dp"
+                        android:layout_height="28dp"
+                        android:text="魅力榜"
+                        style="@style/ActivityWhiteTextColor"
+                        android:textSize="12sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_meili"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </FrameLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="15dp" />
+
+            <FrameLayout
+
+                android:id="@+id/fl_shili"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1">
+
+                <ImageView
+
+                    android:id="@+id/fl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription" />
+
+
+
+                
+                <FrameLayout
+                    android:background="@drawable/shape_discover_fragment_wuman"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                <TextView
+                    android:id="@+id/tv_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="23.5dp"
+                    android:maxWidth="200dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="名字"
+                    style="@style/ActivityWhiteTextColor"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_number2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:drawableStart="@drawable/find_icon_gift_red"
+                    android:drawablePadding="2dp"
+                    tools:text="0"
+                    style="@style/ActivityWhiteTextColor"
+                    android:textSize="10sp" />
+                
+                <FrameLayout
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_width="70dp"
+                    android:layout_height="38dp">
+
+                    <TextView
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/shape_faxian_paihang"
+                        android:gravity="center"
+                        android:layout_width="70dp"
+                        android:layout_height="28dp"
+                        android:text="实力榜"
+                        style="@style/ActivityWhiteTextColor"
+                        android:textSize="12sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_shili"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </FrameLayout>
+
+
+                </FrameLayout>
+
+
+             
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="17dp"
+            android:paddingBottom="17dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/find_icon_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="排行榜"
+                android:textColor="@color/color_ff000000"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_rank"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/iv_rank_go"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/iv_go_detail"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_f8f6fa"
+            android:visibility="gone" />
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

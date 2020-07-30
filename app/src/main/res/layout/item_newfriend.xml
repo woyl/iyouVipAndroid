@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/default_head_iv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="用户名"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@id/head_iv"
+        app:layout_constraintTop_toTopOf="@id/head_iv"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="申请添加你为好友"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/head_iv"
+        app:layout_constraintLeft_toRightOf="@id/head_iv"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/head_iv"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_sizegift"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginEnd="30dp"
+        android:text="×0"
+        android:textColor="@color/color_ffff4d6c"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/head_iv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/head_iv"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/tv_hint_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_club_lv"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/c767676"
+        android:text="交友信息"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_iv"
+        tools:ignore="MissingConstraints"/>
+
+    <LinearLayout
+        android:id="@+id/ry_reject_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_hint_message"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/ly_reject_accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp">
+
+            <TextView
+                android:id="@+id/tv_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_rejuse_bg"
+                android:paddingLeft="50dp"
+                android:paddingTop="9dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="9dp"
+                android:text="拒绝"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/shap_bt_two_color_bg"
+                android:paddingLeft="50dp"
+                android:paddingTop="9dp"
+                android:paddingRight="50dp"
+                android:paddingBottom="9dp"
+                android:text="接受"
+                android:textColor="@color/color_ffffff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_rejected"
+            android:layout_marginTop="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shap_refuse_three"
+            android:gravity="center"
+            android:text="已拒绝"
+            android:textSize="16sp"
+            android:textColor="@color/line_btn"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#05FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/ry_reject_accept"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

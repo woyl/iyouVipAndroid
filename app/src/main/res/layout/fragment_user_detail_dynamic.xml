@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jfkj.im.ui.fragment.UserDetailDynamicFragment">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:visibility="gone"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="98dp"
+            android:layout_height="19dp"
+            android:text="暂时没有动态"
+            android:textColor="#ff767676"
+            android:textSize="13sp"
+            />
+
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:overScrollMode="never"
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_no_dynamic"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="@string/string_no_dynamic"-->
+<!--            android:textColor="@color/color_ffffff"-->
+<!--            android:textSize="15sp"-->
+<!--            android:visibility="gone"/>-->
+
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="62dp"
+    android:layout_marginRight="62dp"
+    android:paddingBottom="20dp"
+    android:layout_gravity="center"
+    android:background="@mipmap/icon_mk_news">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:layout_width="114dp"
+        android:layout_height="25dp"
+        android:text="开启推送通知 "
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="@dimen/album_dp_20"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息、红包、礼物、游戏一个都不错过～"
+        android:textColor="#ff666666"
+        android:textSize="15sp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginRight="19dp"
+        android:layout_marginLeft="19dp"
+        android:background="@drawable/shape_dialog_update_confirm"
+        android:layout_below="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="去设置"
+        android:textColor="#ffffffff"
+        android:textSize="17sp"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/tv_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="以后再说"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        />
+
+
+
+</RelativeLayout>

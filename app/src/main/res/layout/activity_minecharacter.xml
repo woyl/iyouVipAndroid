@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test_bg_nor"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MinecharacterActivity"
+    tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/picture_icon_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="我发起的性格测试"
+        android:textColor="@color/color_ffffff"
+        android:textSize="23sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_mine_character_bg"
+        android:padding="3dp">
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_all"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/progress_tv"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_finsh" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/picture_icon_close"
+        android:text="时间"
+        android:textColor="@color/color_ffffff"
+        android:textSize="14sp"></androidx.appcompat.widget.AppCompatTextView>
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:id="@+id/ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_minecharacter_select"
+            android:paddingLeft="30dp"
+            android:paddingTop="7dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="7dp"
+            android:text="我的题目"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15sp" ></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_minecharacter_unselect"
+            android:paddingLeft="30dp"
+            android:paddingTop="7dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="7dp"
+            android:text="参与用户"
+            android:textColor="@color/color_666666"></androidx.appcompat.widget.AppCompatTextView>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/swiperecyclerview_mime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="19dp" />
+
+    <com.yanzhenjie.recyclerview.SwipeRecyclerView
+        android:id="@+id/swiperecyclerview_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/shape_item_user" />
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

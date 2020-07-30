@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_user_detail_tv_3dp"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:layout_marginTop="5dp"
+    android:textColor="#ffbbbbbb"
+    android:paddingRight="8dp"
+    android:paddingLeft="8dp"
+    android:layout_marginRight="9dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="165cm·45kg"
+
+    android:textSize="11sp">
+
+
+</TextView>
+

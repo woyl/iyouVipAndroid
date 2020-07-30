@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.jfkj.im.TIM.redpack.chatroom.SquareRuleActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_title_transparent" />
+
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="31dp"
+        android:text="I you的用户：\n\n为了维护良好的社区氛围，在广场聊天时请注意以下聊天规范:\n"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:text="
+1.和平交流讨论，不得人身攻击。\n
+2.不得发表煽动国家、地区、名族、宗教间仇恨、歧视等相关言论。\n
+3.此群为I you用户群，禁止交流其他社交产品。\n
+4.禁止发布任何形式的广告及非I you广场官方的链接，任何形式带群号或者二维码的宣传；\n
+5.不散布传播淫秽、色情、暴力、赌博等内容。\n
+6.严禁诋毁、辱骂工作人员，或一任何形式冒充工作人员。\n
+"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv"
+        tools:ignore="MissingConstraints" />
+    <TextView
+
+        android:textSize="13sp"
+        android:background="#80ff2b66"
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="31dp"
+        android:text="上述行为一经合适，广场将对账户进行封号处理。"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

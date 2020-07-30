@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_ff7947ff">#7947ff</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_ff000000">#ff000000</color>
+    <color name="color_666666">#FF666666</color>
+    <color name="color_ffff998f">#FFFF998F</color>
+
+
+    <color name="color_ffbfbbc9">#FFBFBBC9</color>
+    <color name="color_908D94">#908D94</color>
+    <color name="color_999999">#FF999999</color>
+    <color name="color_fff3f1f6">#fff3f1f6</color>
+    <color name="color_ff8d68ff">#ff8d68ff</color>
+    <color name="color_333333">#FF333333</color>
+    <color name="color_e5e5e5">#FFE5E5E5</color>
+    <color name="color_ffff4d6c">#ffff4d6c</color>
+    <color name="color_f8f6fa">#FFF8F6FA</color>
+    <color name="color_ffc528">#FFFFC528</color>
+    <color name="color_a2a6b5">#FFA2A6B5</color>
+    <color name="color_e58c66">#FFE58C66</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_ff7b42">#FF7B42</color>
+    <color name="color_ffb76b">#FFB76B</color>
+    <color name="color_e0e0e0">#E0E0E0</color>
+    <color name="color_f5f6fa">#F5F6FA</color>
+    <color name="color_ffde5e">#FFDE5E</color>
+    <color name="color_211C29">#211C29</color>
+    <color name="color_f7f5fa">#F7F5FA</color>
+    <color name="color_FF5959">#ff5959</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBtn">#016EFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="hlfTransparent">#777777</color>
+    <color name="line_btn">#BBBBBB</color>
+    <color name="tabColorNormal">#ffffff</color>
+    <color name="tabColorSelected">#0accac</color>
+    <color name="colorRadioText">#999999</color>
+    <!--MainActivity item被选中的颜色-->
+    <color name="color_8659ff">#FF8659FF</color>
+    <color name="color_5E58B0">#5E58B0</color>
+    <color name="color_FF8870">#FF8870</color>
+    <color name="color_fff0f0f0">#fff0f0f0</color>
+    <color name="color_bfa1fb">#BFA1FB</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+    <color name="color_F9CD84">#F9CD84</color>
+
+
+    <color name="color_F3F1F6">#F3F1F6</color>
+    <color name="color_ff161823">#FF161823</color>
+    <color name="color_161823">#161823</color>
+
+    // 灰色背景
+    <color name="status_bar_color">#EDEDED</color>
+    <color name="navigation_bar_color">#F7F7F7</color>
+    <color name="slide_bar_hint_color">#CCCCCC</color>
+    // 黑色字体
+    <color name="black_font_color">#181818</color>
+    <color name="text_tips_color">#A5A5A5</color>
+
+    // 线
+    <color name="chat_title_line_color">#E6E6E6</color>
+    <color name="input_title_line_color">#D2D2D2</color>
+
+    <color name="item_split_color">#cccccc</color>
+    <color name="split_lint_color">#D9D9D9</color>
+
+    <color name="text_color_black">#000</color>
+    <color name="text_color_gray">#696969</color>
+
+    <color name="font_blue">#066fff</color>
+
+    <color name="black">#000000</color>
+    <color name="conversation_time_color">#b2b2b2</color>
+    <color name="list_bottom_text_bg">#999999</color>
+    <color name="partTranslucent">#39000000</color>
+    <color name="custom_transparent">#B3000000</color>
+    <color name="dialog_line_bg">#c6c6c6</color>
+    <color name="read_dot_bg">#f74c31</color>
+
+
+    <color name="line">#DDDDDD</color>
+
+    <color name="text_gray1">#777777</color>
+
+    <color name="title_bar_font_color">#016fff</color>
+
+    // 积极钮色值
+    <color name="btn_positive">#00a4ff</color>
+    <color name="btn_positive_hover">#006eff</color>
+
+    // 积极按钮文本色值
+    <color name="text_positive">#ffffff</color>
+    <color name="text_positive_hover">#ffffff</color>
+
+    // 消极按钮背景色值
+    <color name="btn_negative">#ffffff</color>
+    <color name="btn_negative_hover">#cc3428</color>
+
+    // 消极按钮文本色值
+
+
+    // 聊天昵称/时间条背景色值
+
+    // 聊天发送/光标色值
+    <color name="green">#70C160</color>
+    <string name="camera">相机</string>
+    <string name="pic">图片</string>
+    <string name="file">文件</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="un_download">未下载</string>
+    <string name="downloaded">已下载</string>
+    <string name="downloading">下载中...</string>
+    <string name="sended">已发送</string>
+    <string name="has_read">已读</string>
+    <string name="unread">未读</string>
+    <string name="typing">正在输入...</string>
+
+    <string name="chat_to_top">置顶聊天</string>
+
+    <string name="group_id">群ID</string>
+    <string name="group_icon">修改群头像</string>
+    <string name="group_members">群成员</string>
+    <string name="group_type">群类型</string>
+    <string name="add_group_member">添加成员</string>
+    <string name="remove_group_member">移除成员</string>
+    <string name="join_group_type">加群方式</string>
+    <string name="in_group_nick_name">我的群昵称</string>
+    <string name="dissolve">解散俱乐部</string>
+    <string name="modify_group_name">修改群名称</string>
+    <string name="accept">同意</string>
+    <string name="refuse">拒绝</string>
+    <string name="group_apply_members">群申请</string>
+    <string name="accepted">已同意</string>
+    <string name="refused">已拒绝</string>
+    <string name="group_apply_tips">%1$d 条入俱乐部申请</string>
+    <string name="group_apply_click_handle">点击处理</string>
+    <string name="group_remove_member">移出群聊</string>
+    <string name="group_join_type">加群方式</string>
+    <string name="modify_group_name_success">修改俱乐部名称成功</string>
+    <string name="modify_group_notice_success">修改俱乐部公告成功</string>
+    <string name="exit_group">退出俱乐部</string>
+    <string name="modify_nickname_success">修改昵称成功</string>
+    <string name="view_original_image">查看原图</string>
+    <string name="group_info">俱乐部信息</string>
+    <string name="group_jlb_name">俱乐部名称</string>
+    <string name="fix_group_jlb_name">修改俱乐部名称</string>
+    <string name="group_notice_jlb">俱乐部公告</string>
+    <string name="fix_group_notice_jlb">修改俱乐部公告</string>
+    <string name="group_jlb_day_gift">每日礼物数量</string>
+    <string name="group_jlb_gift_date">礼物发放时间</string>
+    <string name="group_jlb_super_club">超级俱乐部</string>
+    <string name="group_message_no">消息免打扰</string>
+    <string name="group_hide_club_member">隐藏俱乐部成员</string>
+    <string name="fix_my_name">修改我的昵称</string>
+    <color name="colorff33343f">#1D1B24</color>
+    <color name="color_00000000">#00000000</color>
+    <string name="look_more_club_member">查看更多俱乐部成员</string>
+    // 联系人相关
+    <string name="new_friend">新的联系人</string>
+    <string name="group">我的群聊</string>
+    <string name="blacklist">黑名单</string>
+    <string name="contact_title">通讯录</string>
+    <string name="conversation_title">互动</string>
+    // 好友资料
+    <string name="profile_detail">详细资料</string>
+    <string name="profile_id">帐号</string>
+    <string name="profile_add_wording">验证消息</string>
+    <string name="profile_remark">设置备注</string>
+    <string name="profile_black">加入黑名单</string>
+    <string name="profile_remark_edit">修改备注</string>
+    <string name="profile_chat">发送消息</string>
+    <string name="profile_del">删除好友</string>
+
+    <color name="gray_1">#CCCCCC</color>
+    <color name="cF7F5FA">#F7F5FA</color>
+    <color name="cBFBBC9">#BFBBC9</color>
+    <color name="c80000000">#99000000</color>
+    <color name="card_tm_black">#4d000000</color>
+    <color name="c1a000000">#1a000000</color>
+    <color name="cFF8C8A94">#FF8C8A94</color>
+    <color name="cF8F6FA">#F8F6FA</color>
+    <color name="color_8a8a95">#8A8A95</color>
+    <color name="cd9_ffffff">#4dffffff</color>
+    <color name="cEE911A">#EE911A</color>
+    <color name="c4d00000">#40000000</color>
+    <color name="cFFDE5F">#FFDE5F</color>
+    <color name="c979798">#979798</color>
+    <color name="cDCDCDC">#DCDCDC</color>
+    <color name="cC2C0C3">#C2C0C3</color>
+    <color name="c666666">#666666</color>
+
+    <color name="color_ff333333">#ff333333</color>
+
+
+    <!--    主题渐变色-->
+    <color name="cFF5969">#FF5969</color>
+
+
+    <!-- app 主题色 -->
+    <color name="cFF0D52">#F84948</color>
+    <color name="color_FF4D6C">#FF2B66</color>
+    <color name="c66FF2B66">#66FF2B66</color>
+    <color name="cCFF2B66">#CCFF2B66</color>
+    <color name="FB8396">#FF2B66</color>
+    <color name="cEF4769">#FF2B66</color>
+    <color name="color_ff4d6c">#FF2B66</color>
+
+    <color name="CB3ffffff">#B3ffffff</color>
+
+
+
+
+    <color name="c0B0B10">#0B0B10</color>
+    <color name="c8659FF">#8659FF</color>
+    <color name="c159BFF">#159BFF</color>
+    <color name="cFF610D">#FF610D</color>
+    <color name="c312018">#312018</color>
+    <color name="c85612B">#85612B</color>
+    <color name="c243048">#232328</color>
+    <color name="cEED5A9">#EED5A9</color>
+    <color name="c111111">#111111</color>
+    <color name="c333333">#333333</color>
+    <color name="c1A1A1A">#1A1A1A</color>
+    <color name="c767676">#767676</color>
+    <color name="c404040">#404040</color>
+    <color name="cFFE9EF">#FFE9EF</color>
+    <color name="cDCA267">#DCA267</color>
+    <color name="cFFD004">#FFD004</color>
+    <color name="cE5E5E5">#E5E5E5</color>
+    <color name="c1E1E1E">#1E1E1E</color>
+    <color name="c1E1D1E">#1E1D1E</color>
+    <color name="C1EE8F4">#1EE8F4</color>
+    <color name="c1d1d1d">#1d1d1d</color>
+    <color name="cff32d5f1">#ff32d5f1</color>
+    <color name="c946261">#946261</color>
+    <color name="cE3C8C7">#E3C8C7</color>
+    <color name="c464646">#464646</color>
+    <color name="cDBB3B0">#DBB3B0</color>
+    <color name="c101010">#101010</color>
+    <color name="cF77C4A">#F77C4A</color>
+    <color name="cCB8B8B">#CB8B8B</color>
+    <color name="cFF2B66">#FF2B66</color>
+    <color name="c291319">#291319</color>
+    <color name="c575757">#575757</color>
+    <color name="c2a2a2a">#2a2a2a</color>
+    <color name="c979797">#979797</color>
+    <color name="cFF3535">#FF3535</color>
+
+    <color name="C33000000">#33000000</color>
+    <color name="CB3000000">#B3000000</color>
+    <color name="c151515">#151515</color>
+    <color name="c29141A">#29141A</color>
+
+
+    <color name="C05FFFFFF">#05ffffff</color>
+    <color name="E6ffffff">#E6ffffff</color>
+    <color name="c0Dffffff">#0DFFFFFF</color>
+    <color name="c00cb51">#00cb51</color>
+    <color name="c33FFFFFF">#33FFFFFF</color>
+    <color name="c4B2C2C">#4B2C2C</color>
+    <color name="E0B6B6">#E0B6B6</color>
+    <color name="c222222">#222222</color>
+    <color name="c9900000">#99000000</color>
+
+</resources>

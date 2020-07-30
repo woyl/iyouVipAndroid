@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cF8F6FA"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_open_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/shap_white_l_r_bg"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="相册"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_E5E5E5"/>
+    <TextView
+        android:id="@+id/tv_send_red_pack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="15sp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="发红包代替任务"/>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@color/white"
+        android:textSize="15sp"
+        android:textColor="@color/c666666"
+        android:gravity="center"
+        android:text="取消"/>
+
+</LinearLayout>

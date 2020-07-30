@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_dialog_selectsex"
+    android:layout_marginRight="40dp"
+    android:layout_marginLeft="40dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="温馨提示"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="17dp"
+
+        android:layout_marginRight="30dp"
+        android:text="在广场发送文字消息需消耗钻石，请您确认后发送。"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:drawablePadding="7.5dp"
+        android:id="@+id/tv_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_content"
+        android:layout_width="wrap_content"
+         android:drawableRight="@mipmap/icon_diamond_yellow"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_base_btn_f3f1f6_20dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="取消"
+        app:layout_constraintLeft_toLeftOf="@id/tv_content"
+        app:layout_constraintRight_toLeftOf="@+id/tv_confirm"
+        app:layout_constraintTop_toBottomOf="@id/tv_number"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_base_btn_black_20dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="确定"
+        android:textColor="@color/color_ffffff"
+        app:layout_constraintLeft_toRightOf="@+id/tv_cancel"
+        app:layout_constraintRight_toRightOf="@+id/tv_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/cb_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent"
+        android:button="@drawable/selector_report"
+        android:paddingLeft="15dp"
+        android:text="不再提示"
+        android:textColor="@color/color_ff000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
